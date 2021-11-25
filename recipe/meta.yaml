@@ -14,6 +14,8 @@ package:
 source:
   url: https://github.com/quantumlib/Cirq/archive/refs/tags/v{{ version }}.tar.gz
   sha256: ccf199aac17750420c26264f46456da1d85ad28ad74b2b6efc40c2d6fe96fede
+  patches:
+    - python-310.patch
 
 build:
   number: 0
