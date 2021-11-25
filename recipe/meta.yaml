@@ -1,5 +1,5 @@
 {% set name = "cirq" %}
-{% set version = "0.13.1" %}
+{% set version = "0.12.0" %}
 {% set home = "https://quantumai.google/cirq" %}
 {% set summary = "An open source framework for programming quantum computers" %}
 {% set doc_url = "https://quantumai.google/cirq/install" %}
