@@ -31,7 +31,6 @@ outputs:
         - python >=3.6
       run:
         - dataclasses
-        - duet-python ~=0.2.0
         - matplotlib-base ~=3.0
         - networkx ~=2.4
         - numpy ~=1.16
@@ -238,7 +237,7 @@ outputs:
       run:
         - {{ name }}-core =={{ version }}
         - google-api-core-grpc >=1.14.0,<2.0.0dev
-        - protobuf >=3.13.0
+        - protobuf ~=3.13.0
 
     test:
       imports:
