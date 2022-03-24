@@ -1,5 +1,5 @@
 {% set name = "cirq" %}
-{% set version = "0.13.1" %}
+{% set version = "0.14.0" %}
 {% set home = "https://quantumai.google/cirq" %}
 {% set summary = "An open source framework for programming quantum computers" %}
 {% set doc_url = "https://quantumai.google/cirq/install" %}
@@ -13,12 +13,10 @@ package:
 
 source:
   url: https://github.com/quantumlib/Cirq/archive/refs/tags/v{{ version }}.tar.gz
-  sha256: cbb81296c9a5767a57e853ef2e88127059b6a64ae5ac4772e8b681096377900d
-  patches:
-    - Python310.patch
+  sha256: ad0e7fa9aa311eeca2ceee4c938950e0d9de69d1720ef08164245874c8567ea9
 
 build:
-  number: 2
+  number: 0
 
 outputs:
 
@@ -32,6 +30,7 @@ outputs:
         - pip
         - python >=3.6
       run:
+        - backports.cached-property >=1.0.1,=1.0
         - dataclasses
         - duet-python >=0.2.0,=0.2
         - matplotlib-base >=3.0,=3
@@ -40,7 +39,7 @@ outputs:
         - pandas
         - sortedcontainers >=2.0,=2
         - scipy
-        - sympy
+        - sympy <1.10
         - typing_extensions
         - tqdm
 
@@ -74,7 +73,7 @@ outputs:
       run:
         - {{ name }}-core =={{ version }}
         - requests >=2.18,=2
- 
+
     test:
       imports:
         - {{ name }}_aqt
@@ -82,7 +81,7 @@ outputs:
         - pip check
       requires:
         - pip
- 
+
     about:
       home: {{ home }}
       summary: {{ summary }}
@@ -103,7 +102,7 @@ outputs:
         - python >=3.6
       run:
         - {{ name }}-core =={{ version }}
- 
+
     test:
       imports:
         - {{ name }}_web
@@ -111,7 +110,7 @@ outputs:
         - pip check
       requires:
         - pip
- 
+
     about:
       home: {{ home }}
       summary: {{ summary }}
