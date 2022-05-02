@@ -29,6 +29,8 @@ outputs:
       host:
         - pip
         - python >=3.6
+        - setuptools
+        - wheel
       run:
         - backports.cached-property >=1.0.1,=1.0
         - dataclasses
@@ -70,6 +72,8 @@ outputs:
       host:
         - pip
         - python >=3.6
+        - setuptools
+        - wheel
       run:
         - {{ name }}-core =={{ version }}
         - requests >=2.18,=2
@@ -100,6 +104,8 @@ outputs:
       host:
         - pip
         - python >=3.6
+        - setuptools
+        - wheel
       run:
         - {{ name }}-core =={{ version }}
 
@@ -129,6 +135,8 @@ outputs:
       host:
         - pip
         - python >=3.7
+        - setuptools
+        - wheel
       run:
         - {{ name }}-core =={{ version }}
         - attrs >=20.3.0,=20.3
@@ -176,6 +184,8 @@ outputs:
       host:
         - pip
         - python >=3.6
+        - setuptools
+        - wheel
       run:
         - {{ name }}-core =={{ version }}
         - requests >=2.18,=2
@@ -206,6 +216,8 @@ outputs:
       host:
         - pip
         - python >=3.6
+        - setuptools
+        - wheel
       run:
         - {{ name }}-core =={{ version }}
         - requests >=2.18,=2
@@ -236,6 +248,8 @@ outputs:
       host:
         - pip
         - python >=3.6
+        - setuptools
+        - wheel
       run:
         - {{ name }}-core =={{ version }}
         - google-api-core-grpc >=1.14.0,<2.0.0dev
@@ -267,6 +281,8 @@ outputs:
       host:
         - pip
         - python >=3.6
+        - setuptools
+        - wheel
       run:
         - {{ name }}-aqt =={{ version }}
         - {{ name }}-core =={{ version }}
