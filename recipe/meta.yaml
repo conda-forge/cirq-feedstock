@@ -104,7 +104,7 @@ outputs:
       host:
         - pip
         - python >=3.6
-        - setuptools >=40.8.0 >=40.8.0
+        - setuptools >=40.8.0
         - wheel
       run:
         - {{ name }}-core =={{ version }}
