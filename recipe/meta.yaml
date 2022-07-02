@@ -1,10 +1,11 @@
 {% set name = "cirq" %}
-{% set version = "0.14.0" %}
+{% set version = "0.15.0" %}
 {% set home = "https://quantumai.google/cirq" %}
 {% set summary = "An open source framework for programming quantum computers" %}
 {% set doc_url = "https://quantumai.google/cirq/install" %}
 {% set license = "Apache-2.0" %}
 {% set license_file = "LICENSE" %}
+{% set python_ver = "python >=3.7" %}
 
 
 package:
@@ -13,22 +14,29 @@ package:
 
 source:
   url: https://github.com/quantumlib/Cirq/archive/refs/tags/v{{ version }}.tar.gz
-  sha256: ad0e7fa9aa311eeca2ceee4c938950e0d9de69d1720ef08164245874c8567ea9
+  sha256: ed2ccb9e6d0bec155ef4e71a4cfedb0309f18a1d70b12e053549446e3a604db9
 
 build:
   number: 0
+
+requirements:
+   host:
+     - setuptools
+     - pip
+     - {{ python_ver }}
+     - wheel
 
 outputs:
 
   - name: {{ name }}-core
     build:
       noarch: python
-    script: build_{{ name }}-core.sh
+    script: {{ PYTHON }} -m pip install . -vv
 
     requirements:
       host:
         - pip
-        - python >=3.6
+        - {{ python_ver }}
       run:
         - backports.cached-property >=1.0.1,=1.0
         - dataclasses
@@ -37,6 +45,7 @@ outputs:
         - networkx >=2.4,=2
         - numpy >=1.16,=1
         - pandas
+        - {{ python_ver }}
         - sortedcontainers >=2.0,=2
         - scipy
         - sympy <1.10
@@ -64,15 +73,16 @@ outputs:
   - name: {{ name }}-aqt
     build:
       noarch: python
-    script: build_{{ name }}-aqt.sh
+    script: {{ PYTHON }} -m pip install . -vv
 
     requirements:
       host:
         - pip
-        - python >=3.6
+        - {{ python_ver }}
       run:
         - {{ name }}-core =={{ version }}
         - requests >=2.18,=2
+        - {{ python_ver }}
 
     test:
       imports:
@@ -94,14 +104,15 @@ outputs:
   - name: {{ name }}-web
     build:
       noarch: python
-    script: build_{{ name }}-web.sh
+    script: {{ PYTHON }} -m pip install . -vv
 
     requirements:
       host:
         - pip
-        - python >=3.6
+        - {{ python_ver }}
       run:
         - {{ name }}-core =={{ version }}
+        - {{ python_ver }}
 
     test:
       imports:
@@ -123,12 +134,12 @@ outputs:
   - name: {{ name }}-rigetti
     build:
       noarch: python
-    script: build_{{ name }}-rigetti.sh
+    script: {{ PYTHON }} -m pip install . -vv
 
     requirements:
       host:
         - pip
-        - python >=3.7
+        - {{ python_ver }}
       run:
         - {{ name }}-core =={{ version }}
         - attrs >=20.3.0,=20.3
@@ -149,6 +160,7 @@ outputs:
         - six >=1.16.0,=1.16
         - sniffio >=1.2.0,=1.2
         - toml >=0.10.2,=0.10
+        - {{ python_ver }}
 
     test:
       imports:
@@ -170,15 +182,16 @@ outputs:
   - name: {{ name }}-pasqal
     build:
       noarch: python
-    script: build_{{ name }}-pasqal.sh
+    script: {{ PYTHON }} -m pip install . -vv
 
     requirements:
       host:
         - pip
-        - python >=3.6
+        - {{ python_ver }}
       run:
         - {{ name }}-core =={{ version }}
         - requests >=2.18,=2
+        - {{ python_ver }}
 
     test:
       imports:
@@ -200,15 +213,16 @@ outputs:
   - name: {{ name }}-ionq
     build:
       noarch: python
-    script: build_{{ name }}-ionq.sh
+    script: {{ PYTHON }} -m pip install . -vv
 
     requirements:
       host:
         - pip
-        - python >=3.6
+        - {{ python_ver }}
       run:
         - {{ name }}-core =={{ version }}
         - requests >=2.18,=2
+        - {{ python_ver }}
 
     test:
       imports:
@@ -230,16 +244,17 @@ outputs:
   - name: {{ name }}-google
     build:
       noarch: python
-    script: build_{{ name }}-google.sh
+    script: {{ PYTHON }} -m pip install . -vv
 
     requirements:
       host:
         - pip
-        - python >=3.6
+        - {{ python_ver }}
       run:
         - {{ name }}-core =={{ version }}
         - google-api-core-grpc >=1.14.0,<2.0.0dev
         - protobuf >=3.13.0
+        - {{ python_ver }}
 
     test:
       imports:
@@ -261,12 +276,12 @@ outputs:
   - name: {{ name }}
     build:
       noarch: python
-    script: build_{{ name }}.sh
+    script: {{ PYTHON }} -m pip install . -vv
 
     requirements:
       host:
         - pip
-        - python >=3.6
+        - {{ python_ver }}
       run:
         - {{ name }}-aqt =={{ version }}
         - {{ name }}-core =={{ version }}
@@ -275,6 +290,7 @@ outputs:
         - {{ name }}-pasqal =={{ version }}
         - {{ name }}-rigetti =={{ version }}
         - {{ name }}-web =={{ version }}
+        - {{ python_ver }}
 
     test:
       imports:
