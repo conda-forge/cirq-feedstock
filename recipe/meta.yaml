@@ -19,6 +19,13 @@ source:
 build:
   number: 0
 
+requirements:
+   host:
+     - setuptools
+     - pip
+     - {{ python_ver }}
+     - wheel
+
 outputs:
 
   - name: {{ name }}-core
