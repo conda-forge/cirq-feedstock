@@ -238,7 +238,7 @@ outputs:
   - name: {{ name }}-google
     build:
       noarch: python
-    script: build_{{ name }}-google.shs
+    script: build_{{ name }}-google.sh
 
     requirements:
       host:
