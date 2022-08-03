@@ -31,7 +31,7 @@ outputs:
   - name: {{ name }}-core
     build:
       noarch: python
-    script: {{ PYTHON }} -m pip install . -vv
+    script: {{ PYTHON }} -m pip install {{ name }}-core -vv
 
     requirements:
       host:
@@ -73,7 +73,7 @@ outputs:
   - name: {{ name }}-aqt
     build:
       noarch: python
-    script: {{ PYTHON }} -m pip install . -vv
+    script: {{ PYTHON }} -m pip install {{ name }}-aqt -vv
 
     requirements:
       host:
@@ -104,7 +104,7 @@ outputs:
   - name: {{ name }}-web
     build:
       noarch: python
-    script: {{ PYTHON }} -m pip install . -vv
+    script: {{ PYTHON }} -m pip install {{ name }}-web -vv
 
     requirements:
       host:
@@ -134,7 +134,7 @@ outputs:
   - name: {{ name }}-rigetti
     build:
       noarch: python
-    script: {{ PYTHON }} -m pip install . -vv
+    script: {{ PYTHON }} -m pip install {{ name }}-rigetti -vv
 
     requirements:
       host:
@@ -182,7 +182,7 @@ outputs:
   - name: {{ name }}-pasqal
     build:
       noarch: python
-    script: {{ PYTHON }} -m pip install . -vv
+    script: {{ PYTHON }} -m pip install {{ name }}-pasqal -vv
 
     requirements:
       host:
@@ -213,7 +213,7 @@ outputs:
   - name: {{ name }}-ionq
     build:
       noarch: python
-    script: {{ PYTHON }} -m pip install . -vv
+    script: {{ PYTHON }} -m pip install {{ name }}-ionq -vv
 
     requirements:
       host:
@@ -244,7 +244,7 @@ outputs:
   - name: {{ name }}-google
     build:
       noarch: python
-    script: {{ PYTHON }} -m pip install . -vv
+    script: {{ PYTHON }} -m pip install {{ name }}-google -vv
 
     requirements:
       host:
