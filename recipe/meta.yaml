@@ -1,6 +1,7 @@
 {% set python_ver = "python >=3.7" %}
+{% set python_ver = "python >=3.7" %}
 {% set name = "cirq" %}
-{% set version = "1.0.0" %}
+{% set version = "1.1.0" %}
 {% set home = "https://quantumai.google/cirq" %}
 {% set summary = "An open source framework for programming quantum computers" %}
 {% set doc_url = "https://quantumai.google/cirq/install" %}
@@ -15,7 +16,7 @@ package:
 
 source:
   url: https://github.com/quantumlib/Cirq/archive/refs/tags/v{{ version }}.tar.gz
-  sha256: d95d571f7165640083e11d1d25a6a7603e91b13d605e4b3a99aa152f5528a1ae
+  sha256: 76a9d109fc8b6a084ab813388655ffcb5239552518f82b34705feccaa8f5cb51
 
 build:
   number: 0
@@ -33,17 +34,15 @@ outputs:
         - pip
         - {{ python_ver }}
       run:
-        - backports.cached-property >=1.0.1,=1.0
-        - dataclasses
         - duet-python >=0.2.7,=0.2
         - matplotlib-base >=3.0,=3
         - networkx >=2.4,=2
-        - numpy >=1.16,=1
+        - numpy >=1.16,<1.24
         - pandas
         - {{ python_ver }}
         - sortedcontainers >=2.0,=2
         - scipy
-        - sympy <1.10
+        - sympy
         - typing_extensions
         - tqdm
 
@@ -137,7 +136,7 @@ outputs:
         - {{ python_ver }}
       run:
         - {{ name }}-core =={{ version }}
-        - pyquil >=3.0.0
+        - pyquil >=3.2.0
         - {{ python_ver }}
 
     test:
