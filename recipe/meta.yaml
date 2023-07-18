@@ -1,7 +1,8 @@
 {% set python_ver = "python >=3.7" %}
 {% set python_ver = "python >=3.7" %}
+{% set python_ver = "python >=3.7" %}
 {% set name = "cirq" %}
-{% set version = "1.1.0" %}
+{% set version = "1.2.0" %}
 {% set home = "https://quantumai.google/cirq" %}
 {% set summary = "An open source framework for programming quantum computers" %}
 {% set doc_url = "https://quantumai.google/cirq/install" %}
@@ -16,7 +17,7 @@ package:
 
 source:
   url: https://github.com/quantumlib/Cirq/archive/refs/tags/v{{ version }}.tar.gz
-  sha256: 76a9d109fc8b6a084ab813388655ffcb5239552518f82b34705feccaa8f5cb51
+  sha256: 96883ed47254a78bad54dee6a549b9d6097a6b3c3af11715e6e9f6880836b1d0
 
 build:
   number: 0
