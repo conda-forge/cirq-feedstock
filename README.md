@@ -1,15 +1,127 @@
+About cirq-feedstock
+====================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/cirq-feedstock/blob/main/LICENSE.txt)
+
+
 About cirq
-==========
+----------
 
 Home: https://quantumai.google/cirq
 
 Package license: Apache-2.0
 
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/cirq-feedstock/blob/main/LICENSE.txt)
+Summary: An open source framework for programming quantum computers
+
+Development: https://github.com/quantumlib/Cirq
+
+Documentation: https://quantumai.google/cirq/install
+
+Cirq is a Python library for writing, manipulating, and optimizing quantum
+circuits and running them against quantum computers and simulators.
+
+
+About cirq-core
+---------------
+
+Home: https://quantumai.google/cirq
+
+Package license: Apache-2.0
 
 Summary: An open source framework for programming quantum computers
 
 Development: https://github.com/quantumlib/Cirq/tree/master/cirq-core
+
+Documentation: https://quantumai.google/cirq/install
+
+About cirq-aqt
+--------------
+
+Home: https://quantumai.google/cirq
+
+Package license: Apache-2.0
+
+Summary: An open source framework for programming quantum computers
+
+Development: https://github.com/quantumlib/Cirq/tree/master/cirq-aqt
+
+Documentation: https://quantumai.google/cirq/install
+
+About cirq-google
+-----------------
+
+Home: https://quantumai.google/cirq
+
+Package license: Apache-2.0
+
+Summary: An open source framework for programming quantum computers
+
+Development: https://github.com/quantumlib/Cirq/tree/master/cirq-google
+
+Documentation: https://quantumai.google/cirq/install
+
+About cirq-ionq
+---------------
+
+Home: https://quantumai.google/cirq
+
+Package license: Apache-2.0
+
+Summary: An open source framework for programming quantum computers
+
+Development: https://github.com/quantumlib/Cirq/tree/master/cirq-ionq
+
+Documentation: https://quantumai.google/cirq/install
+
+About cirq-pasqal
+-----------------
+
+Home: https://quantumai.google/cirq
+
+Package license: Apache-2.0
+
+Summary: An open source framework for programming quantum computers
+
+Development: https://github.com/quantumlib/Cirq/tree/master/cirq-pasqal
+
+Documentation: https://quantumai.google/cirq/install
+
+About cirq-rigetti
+------------------
+
+Home: https://quantumai.google/cirq
+
+Package license: Apache-2.0
+
+Summary: An open source framework for programming quantum computers
+
+Development: https://github.com/quantumlib/Cirq/tree/master/cirq-rigetti
+
+Documentation: https://quantumai.google/cirq/install
+
+About cirq-web
+--------------
+
+Home: https://quantumai.google/cirq
+
+Package license: Apache-2.0
+
+Summary: An open source framework for programming quantum computers
+
+Development: https://github.com/quantumlib/Cirq/tree/master/cirq-web
+
+Documentation: https://quantumai.google/cirq/install
+
+About cirq
+----------
+
+Home: https://quantumai.google/cirq
+
+Package license: Apache-2.0
+
+Summary: An open source framework for programming quantum computers
+
+Development: https://github.com/quantumlib/Cirq
 
 Documentation: https://quantumai.google/cirq/install
 
