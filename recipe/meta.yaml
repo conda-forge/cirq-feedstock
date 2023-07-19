@@ -248,7 +248,7 @@ outputs:
       license: {{ license }}
       license_file: {{ name }}-google/{{ license_file }}
 
- - name: {{ name }}-ft
+  - name: {{ name }}-ft
     build:
       noarch: python
     script: build_{{ name }}-core.sh
