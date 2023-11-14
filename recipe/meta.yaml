@@ -332,4 +332,5 @@ about:
 extra:
   recipe-maintainers:
     - BastianZim
+    - basnijholt
   feedstock-name: {{ name }}
