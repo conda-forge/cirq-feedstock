@@ -34,19 +34,6 @@ Development: https://github.com/quantumlib/Cirq/tree/master/cirq-core
 
 Documentation: https://quantumai.google/cirq/install
 
-About cirq-ft
--------------
-
-Home: https://quantumai.google/cirq
-
-Package license: Apache-2.0
-
-Summary: An open source framework for programming quantum computers
-
-Development: https://github.com/quantumlib/Cirq/tree/master/cirq-ft
-
-Documentation: https://quantumai.google/cirq/install
-
 About cirq-aqt
 --------------
 
@@ -57,6 +44,19 @@ Package license: Apache-2.0
 Summary: An open source framework for programming quantum computers
 
 Development: https://github.com/quantumlib/Cirq/tree/master/cirq-aqt
+
+Documentation: https://quantumai.google/cirq/install
+
+About cirq-ft
+-------------
+
+Home: https://quantumai.google/cirq
+
+Package license: Apache-2.0
+
+Summary: An open source framework for programming quantum computers
+
+Development: https://github.com/quantumlib/Cirq/tree/master/cirq-ft
 
 Documentation: https://quantumai.google/cirq/install
 
