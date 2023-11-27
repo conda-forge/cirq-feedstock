@@ -258,6 +258,7 @@ outputs:
         - pip
         - {{ python_ver }}
       run:
+        - {{ name }}-core =={{ version }}
         - attrs
         - cachetools >=5.3
         - ipywidgets
