@@ -251,7 +251,7 @@ outputs:
   - name: {{ name }}-ft
     build:
       noarch: python
-    script: build_{{ name }}-core.sh
+    script: build_{{ name }}-ft.sh
 
     requirements:
       host:
