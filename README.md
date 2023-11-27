@@ -281,4 +281,5 @@ Feedstock Maintainers
 =====================
 
 * [@BastianZim](https://github.com/BastianZim/)
+* [@basnijholt](https://github.com/basnijholt/)
 
