@@ -1,15 +1,140 @@
+About cirq-feedstock
+====================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/cirq-feedstock/blob/main/LICENSE.txt)
+
+
 About cirq
-==========
+----------
 
 Home: https://quantumai.google/cirq
 
 Package license: Apache-2.0
 
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/cirq-feedstock/blob/main/LICENSE.txt)
+Summary: An open source framework for programming quantum computers
+
+Development: https://github.com/quantumlib/Cirq
+
+Documentation: https://quantumai.google/cirq/install
+
+Cirq is a Python library for writing, manipulating, and optimizing quantum
+circuits and running them against quantum computers and simulators.
+
+
+About cirq-core
+---------------
+
+Home: https://quantumai.google/cirq
+
+Package license: Apache-2.0
 
 Summary: An open source framework for programming quantum computers
 
 Development: https://github.com/quantumlib/Cirq/tree/master/cirq-core
+
+Documentation: https://quantumai.google/cirq/install
+
+About cirq-aqt
+--------------
+
+Home: https://quantumai.google/cirq
+
+Package license: Apache-2.0
+
+Summary: An open source framework for programming quantum computers
+
+Development: https://github.com/quantumlib/Cirq/tree/master/cirq-aqt
+
+Documentation: https://quantumai.google/cirq/install
+
+About cirq-ft
+-------------
+
+Home: https://quantumai.google/cirq
+
+Package license: Apache-2.0
+
+Summary: An open source framework for programming quantum computers
+
+Development: https://github.com/quantumlib/Cirq/tree/master/cirq-ft
+
+Documentation: https://quantumai.google/cirq/install
+
+About cirq-google
+-----------------
+
+Home: https://quantumai.google/cirq
+
+Package license: Apache-2.0
+
+Summary: An open source framework for programming quantum computers
+
+Development: https://github.com/quantumlib/Cirq/tree/master/cirq-google
+
+Documentation: https://quantumai.google/cirq/install
+
+About cirq-ionq
+---------------
+
+Home: https://quantumai.google/cirq
+
+Package license: Apache-2.0
+
+Summary: An open source framework for programming quantum computers
+
+Development: https://github.com/quantumlib/Cirq/tree/master/cirq-ionq
+
+Documentation: https://quantumai.google/cirq/install
+
+About cirq-pasqal
+-----------------
+
+Home: https://quantumai.google/cirq
+
+Package license: Apache-2.0
+
+Summary: An open source framework for programming quantum computers
+
+Development: https://github.com/quantumlib/Cirq/tree/master/cirq-pasqal
+
+Documentation: https://quantumai.google/cirq/install
+
+About cirq-rigetti
+------------------
+
+Home: https://quantumai.google/cirq
+
+Package license: Apache-2.0
+
+Summary: An open source framework for programming quantum computers
+
+Development: https://github.com/quantumlib/Cirq/tree/master/cirq-rigetti
+
+Documentation: https://quantumai.google/cirq/install
+
+About cirq-web
+--------------
+
+Home: https://quantumai.google/cirq
+
+Package license: Apache-2.0
+
+Summary: An open source framework for programming quantum computers
+
+Development: https://github.com/quantumlib/Cirq/tree/master/cirq-web
+
+Documentation: https://quantumai.google/cirq/install
+
+About cirq
+----------
+
+Home: https://quantumai.google/cirq
+
+Package license: Apache-2.0
+
+Summary: An open source framework for programming quantum computers
+
+Development: https://github.com/quantumlib/Cirq
 
 Documentation: https://quantumai.google/cirq/install
 
@@ -34,6 +159,7 @@ Current release info
 | [![Conda Recipe](https://img.shields.io/badge/recipe-cirq-green.svg)](https://anaconda.org/conda-forge/cirq) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/cirq.svg)](https://anaconda.org/conda-forge/cirq) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/cirq.svg)](https://anaconda.org/conda-forge/cirq) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/cirq.svg)](https://anaconda.org/conda-forge/cirq) |
 | [![Conda Recipe](https://img.shields.io/badge/recipe-cirq--aqt-green.svg)](https://anaconda.org/conda-forge/cirq-aqt) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/cirq-aqt.svg)](https://anaconda.org/conda-forge/cirq-aqt) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/cirq-aqt.svg)](https://anaconda.org/conda-forge/cirq-aqt) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/cirq-aqt.svg)](https://anaconda.org/conda-forge/cirq-aqt) |
 | [![Conda Recipe](https://img.shields.io/badge/recipe-cirq--core-green.svg)](https://anaconda.org/conda-forge/cirq-core) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/cirq-core.svg)](https://anaconda.org/conda-forge/cirq-core) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/cirq-core.svg)](https://anaconda.org/conda-forge/cirq-core) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/cirq-core.svg)](https://anaconda.org/conda-forge/cirq-core) |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-cirq--ft-green.svg)](https://anaconda.org/conda-forge/cirq-ft) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/cirq-ft.svg)](https://anaconda.org/conda-forge/cirq-ft) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/cirq-ft.svg)](https://anaconda.org/conda-forge/cirq-ft) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/cirq-ft.svg)](https://anaconda.org/conda-forge/cirq-ft) |
 | [![Conda Recipe](https://img.shields.io/badge/recipe-cirq--google-green.svg)](https://anaconda.org/conda-forge/cirq-google) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/cirq-google.svg)](https://anaconda.org/conda-forge/cirq-google) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/cirq-google.svg)](https://anaconda.org/conda-forge/cirq-google) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/cirq-google.svg)](https://anaconda.org/conda-forge/cirq-google) |
 | [![Conda Recipe](https://img.shields.io/badge/recipe-cirq--ionq-green.svg)](https://anaconda.org/conda-forge/cirq-ionq) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/cirq-ionq.svg)](https://anaconda.org/conda-forge/cirq-ionq) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/cirq-ionq.svg)](https://anaconda.org/conda-forge/cirq-ionq) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/cirq-ionq.svg)](https://anaconda.org/conda-forge/cirq-ionq) |
 | [![Conda Recipe](https://img.shields.io/badge/recipe-cirq--pasqal-green.svg)](https://anaconda.org/conda-forge/cirq-pasqal) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/cirq-pasqal.svg)](https://anaconda.org/conda-forge/cirq-pasqal) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/cirq-pasqal.svg)](https://anaconda.org/conda-forge/cirq-pasqal) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/cirq-pasqal.svg)](https://anaconda.org/conda-forge/cirq-pasqal) |
@@ -50,16 +176,16 @@ conda config --add channels conda-forge
 conda config --set channel_priority strict
 ```
 
-Once the `conda-forge` channel has been enabled, `cirq, cirq-aqt, cirq-core, cirq-google, cirq-ionq, cirq-pasqal, cirq-rigetti, cirq-web` can be installed with `conda`:
+Once the `conda-forge` channel has been enabled, `cirq, cirq-aqt, cirq-core, cirq-ft, cirq-google, cirq-ionq, cirq-pasqal, cirq-rigetti, cirq-web` can be installed with `conda`:
 
 ```
-conda install cirq cirq-aqt cirq-core cirq-google cirq-ionq cirq-pasqal cirq-rigetti cirq-web
+conda install cirq cirq-aqt cirq-core cirq-ft cirq-google cirq-ionq cirq-pasqal cirq-rigetti cirq-web
 ```
 
 or with `mamba`:
 
 ```
-mamba install cirq cirq-aqt cirq-core cirq-google cirq-ionq cirq-pasqal cirq-rigetti cirq-web
+mamba install cirq cirq-aqt cirq-core cirq-ft cirq-google cirq-ionq cirq-pasqal cirq-rigetti cirq-web
 ```
 
 It is possible to list all of the versions of `cirq` available on your platform with `conda`:
@@ -106,7 +232,7 @@ available continuous integration services. Thanks to the awesome service provide
 [CircleCI](https://circleci.com/), [AppVeyor](https://www.appveyor.com/),
 [Drone](https://cloud.drone.io/welcome), and [TravisCI](https://travis-ci.com/)
 it is possible to build and upload installable packages to the
-[conda-forge](https://anaconda.org/conda-forge) [Anaconda-Cloud](https://anaconda.org/)
+[conda-forge](https://anaconda.org/conda-forge) [anaconda.org](https://anaconda.org/)
 channel for Linux, Windows and OSX respectively.
 
 To manage the continuous integration and simplify feedstock maintenance
@@ -155,4 +281,5 @@ Feedstock Maintainers
 =====================
 
 * [@BastianZim](https://github.com/BastianZim/)
+* [@basnijholt](https://github.com/basnijholt/)
 

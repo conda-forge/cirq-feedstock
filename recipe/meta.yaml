@@ -1,13 +1,11 @@
-{% set python_ver = "python >=3.7" %}
-{% set python_ver = "python >=3.7" %}
 {% set name = "cirq" %}
-{% set version = "1.1.0" %}
+{% set version = "1.2.0" %}
 {% set home = "https://quantumai.google/cirq" %}
 {% set summary = "An open source framework for programming quantum computers" %}
 {% set doc_url = "https://quantumai.google/cirq/install" %}
 {% set license = "Apache-2.0" %}
 {% set license_file = "LICENSE" %}
-{% set python_ver = "python >=3.7" %}
+{% set python_ver = "python >=3.9" %}
 
 
 package:
@@ -16,7 +14,7 @@ package:
 
 source:
   url: https://github.com/quantumlib/Cirq/archive/refs/tags/v{{ version }}.tar.gz
-  sha256: 76a9d109fc8b6a084ab813388655ffcb5239552518f82b34705feccaa8f5cb51
+  sha256: 96883ed47254a78bad54dee6a549b9d6097a6b3c3af11715e6e9f6880836b1d0
 
 build:
   number: 0
@@ -34,16 +32,16 @@ outputs:
         - pip
         - {{ python_ver }}
       run:
-        - duet-python >=0.2.7,=0.2
+        - duet-python >=0.2.8,=0.2
         - matplotlib-base >=3.0,=3
-        - networkx >=2.4,=2
-        - numpy >=1.16,<1.24
+        - networkx >=2.4
+        - numpy >=1.16,=1
         - pandas
         - {{ python_ver }}
         - sortedcontainers >=2.0,=2
         - scipy
         - sympy
-        - typing_extensions
+        - typing_extensions >=4.2
         - tqdm
 
     test:
@@ -136,7 +134,7 @@ outputs:
         - {{ python_ver }}
       run:
         - {{ name }}-core =={{ version }}
-        - pyquil >=3.2.0
+        - pyquil >=3.2.0, <3.3.0
         - {{ python_ver }}
 
     test:
@@ -229,8 +227,8 @@ outputs:
         - {{ python_ver }}
       run:
         - {{ name }}-core =={{ version }}
-        - google-api-core-grpc >=1.14.0,<2.0.0dev
-        - protobuf >=3.15.0,<4
+        - google-api-core-grpc >=1.14.0
+        - protobuf >=3.15.0
         - proto-plus >=1.20.0
         - {{ python_ver }}
 
@@ -250,6 +248,39 @@ outputs:
       license: {{ license }}
       license_file: {{ name }}-google/{{ license_file }}
 
+  - name: {{ name }}-ft
+    build:
+      noarch: python
+    script: build_{{ name }}-ft.sh
+
+    requirements:
+      host:
+        - pip
+        - {{ python_ver }}
+      run:
+        - {{ name }}-core =={{ version }}
+        - attrs
+        - cachetools >=5.3
+        - ipywidgets
+        - nbconvert
+        - nbformat
+
+    test:
+      imports:
+        - {{ name }}_ft
+      commands:
+        - pip check
+      requires:
+        - pip
+
+    about:
+      home: {{ home }}
+      summary: {{ summary }}
+      dev_url: https://github.com/quantumlib/Cirq/tree/master/cirq-ft
+      doc_url: {{ doc_url }}
+      license: {{ license }}
+      license_file: {{ name }}-ft/{{ license_file }}
+
 
   - name: {{ name }}
     build:
@@ -266,6 +297,7 @@ outputs:
         - {{ name }}-google =={{ version }}
         - {{ name }}-ionq =={{ version }}
         - {{ name }}-pasqal =={{ version }}
+        - {{ name }}-ft =={{ version }}
         - {{ name }}-rigetti =={{ version }}
         - {{ name }}-web =={{ version }}
         - {{ python_ver }}
