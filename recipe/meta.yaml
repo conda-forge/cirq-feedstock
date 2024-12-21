@@ -17,7 +17,7 @@ source:
   sha256: c72329be02493b8751f176c5b99277c7892b9e1c025d7ab8e4b2f4d9fe79cd8b
 
 build:
-  number: 0
+  number: 1
   noarch: python
 
 outputs:
@@ -52,6 +52,7 @@ outputs:
         - pip check
       requires:
         - pip
+        - python {{ python_min }}
 
     about:
       home: {{ home }}
@@ -83,6 +84,7 @@ outputs:
         - pip check
       requires:
         - pip
+        - python {{ python_min }}
 
     about:
       home: {{ home }}
@@ -113,6 +115,7 @@ outputs:
         - pip check
       requires:
         - pip
+        - python {{ python_min }}
 
     about:
       home: {{ home }}
@@ -144,6 +147,7 @@ outputs:
         - pip check
       requires:
         - pip
+        - python {{ python_min }}
 
     about:
       home: {{ home }}
@@ -175,6 +179,7 @@ outputs:
         - pip check
       requires:
         - pip
+        - python {{ python_min }}
 
     about:
       home: {{ home }}
@@ -206,6 +211,7 @@ outputs:
         - pip check
       requires:
         - pip
+        - python {{ python_min }}
 
     about:
       home: {{ home }}
@@ -239,6 +245,7 @@ outputs:
         - pip check
       requires:
         - pip
+        - python {{ python_min }}
 
     about:
       home: {{ home }}
@@ -272,6 +279,7 @@ outputs:
         - pip check
       requires:
         - pip
+        - python {{ python_min }}
 
     about:
       home: {{ home }}
@@ -309,6 +317,7 @@ outputs:
         - pip check
       requires:
         - pip
+        - python {{ python_min }}
 
     about:
       home: {{ home }}
