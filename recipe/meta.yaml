@@ -31,6 +31,7 @@ outputs:
       host:
         - pip
         - {{ python_ver }}
+        - setuptools
       run:
         - duet-python >=0.2.8,=0.2
         - matplotlib-base >=3.0,=3
@@ -72,6 +73,7 @@ outputs:
       host:
         - pip
         - {{ python_ver }}
+        - setuptools
       run:
         - {{ name }}-core =={{ version }}
         - requests >=2.18,=2
@@ -104,6 +106,7 @@ outputs:
       host:
         - pip
         - {{ python_ver }}
+        - setuptools
       run:
         - {{ name }}-core =={{ version }}
         - {{ python_ver }}
@@ -135,6 +138,7 @@ outputs:
       host:
         - pip
         - {{ python_ver }}
+        - setuptools
       run:
         - {{ name }}-core =={{ version }}
         - pyquil >=3.2.0, <4.0.0
@@ -167,6 +171,7 @@ outputs:
       host:
         - pip
         - {{ python_ver }}
+        - setuptools
       run:
         - {{ name }}-core =={{ version }}
         - requests >=2.18,=2
@@ -199,6 +204,7 @@ outputs:
       host:
         - pip
         - {{ python_ver }}
+        - setuptools
       run:
         - {{ name }}-core =={{ version }}
         - requests >=2.18,=2
@@ -231,6 +237,7 @@ outputs:
       host:
         - pip
         - {{ python_ver }}
+        - setuptools
       run:
         - {{ name }}-core =={{ version }}
         - google-api-core-grpc >=1.14.0
@@ -264,6 +271,7 @@ outputs:
       host:
         - pip
         - {{ python_ver }}
+        - setuptools
       run:
         - {{ name }}-core =={{ version }}
         - attrs
@@ -299,6 +307,7 @@ outputs:
       host:
         - pip
         - {{ python_ver }}
+        - setuptools
       run:
         - {{ name }}-aqt =={{ version }}
         - {{ name }}-core =={{ version }}
