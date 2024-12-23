@@ -17,7 +17,7 @@ source:
   sha256: c72329be02493b8751f176c5b99277c7892b9e1c025d7ab8e4b2f4d9fe79cd8b
 
 build:
-  number: 0
+  number: 1
   noarch: python
 
 outputs:
@@ -31,6 +31,7 @@ outputs:
       host:
         - pip
         - {{ python_ver }}
+        - setuptools
       run:
         - duet-python >=0.2.8,=0.2
         - matplotlib-base >=3.0,=3
@@ -52,6 +53,7 @@ outputs:
         - pip check
       requires:
         - pip
+        - python {{ python_min }}
 
     about:
       home: {{ home }}
@@ -71,6 +73,7 @@ outputs:
       host:
         - pip
         - {{ python_ver }}
+        - setuptools
       run:
         - {{ name }}-core =={{ version }}
         - requests >=2.18,=2
@@ -83,6 +86,7 @@ outputs:
         - pip check
       requires:
         - pip
+        - python {{ python_min }}
 
     about:
       home: {{ home }}
@@ -102,6 +106,7 @@ outputs:
       host:
         - pip
         - {{ python_ver }}
+        - setuptools
       run:
         - {{ name }}-core =={{ version }}
         - {{ python_ver }}
@@ -113,6 +118,7 @@ outputs:
         - pip check
       requires:
         - pip
+        - python {{ python_min }}
 
     about:
       home: {{ home }}
@@ -132,6 +138,7 @@ outputs:
       host:
         - pip
         - {{ python_ver }}
+        - setuptools
       run:
         - {{ name }}-core =={{ version }}
         - pyquil >=3.2.0, <4.0.0
@@ -144,6 +151,7 @@ outputs:
         - pip check
       requires:
         - pip
+        - python {{ python_min }}
 
     about:
       home: {{ home }}
@@ -163,6 +171,7 @@ outputs:
       host:
         - pip
         - {{ python_ver }}
+        - setuptools
       run:
         - {{ name }}-core =={{ version }}
         - requests >=2.18,=2
@@ -175,6 +184,7 @@ outputs:
         - pip check
       requires:
         - pip
+        - python {{ python_min }}
 
     about:
       home: {{ home }}
@@ -194,6 +204,7 @@ outputs:
       host:
         - pip
         - {{ python_ver }}
+        - setuptools
       run:
         - {{ name }}-core =={{ version }}
         - requests >=2.18,=2
@@ -206,6 +217,7 @@ outputs:
         - pip check
       requires:
         - pip
+        - python {{ python_min }}
 
     about:
       home: {{ home }}
@@ -225,6 +237,7 @@ outputs:
       host:
         - pip
         - {{ python_ver }}
+        - setuptools
       run:
         - {{ name }}-core =={{ version }}
         - google-api-core-grpc >=1.14.0
@@ -239,6 +252,7 @@ outputs:
         - pip check
       requires:
         - pip
+        - python {{ python_min }}
 
     about:
       home: {{ home }}
@@ -257,6 +271,7 @@ outputs:
       host:
         - pip
         - {{ python_ver }}
+        - setuptools
       run:
         - {{ name }}-core =={{ version }}
         - attrs
@@ -272,6 +287,7 @@ outputs:
         - pip check
       requires:
         - pip
+        - python {{ python_min }}
 
     about:
       home: {{ home }}
@@ -291,6 +307,7 @@ outputs:
       host:
         - pip
         - {{ python_ver }}
+        - setuptools
       run:
         - {{ name }}-aqt =={{ version }}
         - {{ name }}-core =={{ version }}
@@ -309,6 +326,7 @@ outputs:
         - pip check
       requires:
         - pip
+        - python {{ python_min }}
 
     about:
       home: {{ home }}
