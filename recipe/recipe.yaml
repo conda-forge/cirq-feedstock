@@ -35,7 +35,7 @@ outputs:
         - setuptools
       run:
         - python >=${{ python_min }}
-        - attrs
+        - attrs >=21.3.0
         - duet-python >=0.2.8
         - matplotlib-base >=3.0,<4
         - networkx >=2.4
