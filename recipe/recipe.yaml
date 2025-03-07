@@ -244,7 +244,6 @@ outputs:
         - ${{ name }}-google ==${{ version }}
         - ${{ name }}-ionq ==${{ version }}
         - ${{ name }}-pasqal ==${{ version }}
-        - ${{ name }}-ft ==${{ version }}
         - ${{ name }}-rigetti ==${{ version }}
         - ${{ name }}-web ==${{ version }}
     tests:
