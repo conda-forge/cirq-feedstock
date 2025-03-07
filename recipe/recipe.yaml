@@ -264,9 +264,7 @@ outputs:
       name: ${{ name }}
     build:
       noarch: python
-      script: |
-        cd ${{ name }}
-        ${PYTHON} -m pip install . -vv --no-deps
+      script: ${PYTHON} -m pip install . -vv --no-deps
     requirements:
       host:
         - python ${{ python_min }}.*
