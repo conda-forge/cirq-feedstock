@@ -35,13 +35,13 @@ outputs:
         - setuptools
       run:
         - python >=${{ python_min }}
-        - duet-python >=0.2.8,<0.3
+        - duet-python >=0.2.8
         - matplotlib-base >=3.0,<4
         - networkx >=2.4
-        - numpy >=1.16,<2
+        - numpy >=1.22,<2
         - pandas
         - sortedcontainers >=2.0,<3
-        - scipy
+        - scipy >=1.0,<2
         - sympy
         - typing_extensions >=4.2
         - tqdm
