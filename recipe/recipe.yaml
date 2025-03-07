@@ -119,7 +119,7 @@ outputs:
     build:
       noarch: python
       script: |
-        cd ciq-rigetti
+        cd cirq-rigetti
         ${PYTHON} -m pip install . -vv --no-deps
     requirements:
       host:
