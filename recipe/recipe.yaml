@@ -39,7 +39,7 @@ outputs:
         - duet-python >=0.2.8
         - matplotlib-base >=3.0,<4
         - networkx >=2.4
-        - numpy >=1.22,<2
+        - numpy >=1.22
         - pandas
         - sortedcontainers >=2.0,<3
         - scipy >=1.0,<2
@@ -244,8 +244,9 @@ outputs:
         - ${{ name }}-google ==${{ version }}
         - ${{ name }}-ionq ==${{ version }}
         - ${{ name }}-pasqal ==${{ version }}
-        - ${{ name }}-rigetti ==${{ version }}
         - ${{ name }}-web ==${{ version }}
+        # TODO: Uncomment when it supports NumPy 2 (https://github.com/rigetti/pyquil/pull/1821)
+        # - ${{ name }}-rigetti ==${{ version }}
     tests:
       - python:
           imports:
