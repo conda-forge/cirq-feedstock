@@ -35,6 +35,7 @@ outputs:
         - setuptools
       run:
         - python >=${{ python_min }}
+        - attrs
         - duet-python >=0.2.8
         - matplotlib-base >=3.0,<4
         - networkx >=2.4
@@ -241,7 +242,6 @@ outputs:
       run:
         - python >=${{ python_min }}
         - ${{ name }}-core ==${{ version }}
-        - attrs
         - cachetools >=5.3
         - ipywidgets
         - nbconvert
