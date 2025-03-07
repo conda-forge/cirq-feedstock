@@ -28,7 +28,7 @@ outputs:
     build:
       noarch: python
       script: |
-        cd ${{ name }}
+        cd cirq-core
         ${PYTHON} -m pip install . -vv --no-deps
     requirements:
       host:
@@ -64,7 +64,7 @@ outputs:
     build:
       noarch: python
       script: |
-        cd ${{ name }}
+        cd cirq-aqt
         ${PYTHON} -m pip install . -vv --no-deps
     requirements:
       host:
@@ -92,7 +92,7 @@ outputs:
     build:
       noarch: python
       script: |
-        cd ${{ name }}
+        cd cirq-web
         ${PYTHON} -m pip install . -vv --no-deps
     requirements:
       host:
@@ -119,7 +119,7 @@ outputs:
     build:
       noarch: python
       script: |
-        cd ${{ name }}
+        cd ciq-rigetti
         ${PYTHON} -m pip install . -vv --no-deps
     requirements:
       host:
@@ -147,7 +147,7 @@ outputs:
     build:
       noarch: python
       script: |
-        cd ${{ name }}
+        cd cirq-pasqal
         ${PYTHON} -m pip install . -vv --no-deps
     requirements:
       host:
@@ -175,7 +175,7 @@ outputs:
     build:
       noarch: python
       script: |
-        cd ${{ name }}
+        cd cirq-ionq
         ${PYTHON} -m pip install . -vv --no-deps
     requirements:
       host:
@@ -203,7 +203,7 @@ outputs:
     build:
       noarch: python
       script: |
-        cd ${{ name }}
+        cd cirq-google
         ${PYTHON} -m pip install . -vv --no-deps
     requirements:
       host:
@@ -233,7 +233,7 @@ outputs:
     build:
       noarch: python
       script: |
-        cd ${{ name }}
+        cd cirq-ft
         ${PYTHON} -m pip install . -vv --no-deps
     requirements:
       host:
