@@ -27,7 +27,9 @@ outputs:
       name: ${{ name }}-core
     build:
       noarch: python
-      script: build_${{ name }}-core.sh
+      script: |
+        cd ${{ name }}
+        ${PYTHON} -m pip install . -vv --no-deps
     requirements:
       host:
         - python ${{ python_min }}.*
@@ -61,7 +63,9 @@ outputs:
       name: ${{ name }}-aqt
     build:
       noarch: python
-      script: build_${{ name }}-aqt.sh
+      script: |
+        cd ${{ name }}
+        ${PYTHON} -m pip install . -vv --no-deps
     requirements:
       host:
         - python ${{ python_min }}.*
@@ -87,7 +91,9 @@ outputs:
       name: ${{ name }}-web
     build:
       noarch: python
-      script: build_${{ name }}-web.sh
+      script: |
+        cd ${{ name }}
+        ${PYTHON} -m pip install . -vv --no-deps
     requirements:
       host:
         - python ${{ python_min }}.*
@@ -112,7 +118,9 @@ outputs:
       name: ${{ name }}-rigetti
     build:
       noarch: python
-      script: build_${{ name }}-rigetti.sh
+      script: |
+        cd ${{ name }}
+        ${PYTHON} -m pip install . -vv --no-deps
     requirements:
       host:
         - python ${{ python_min }}.*
@@ -138,7 +146,9 @@ outputs:
       name: ${{ name }}-pasqal
     build:
       noarch: python
-      script: build_${{ name }}-pasqal.sh
+      script: |
+        cd ${{ name }}
+        ${PYTHON} -m pip install . -vv --no-deps
     requirements:
       host:
         - python ${{ python_min }}.*
@@ -164,7 +174,9 @@ outputs:
       name: ${{ name }}-ionq
     build:
       noarch: python
-      script: build_${{ name }}-ionq.sh
+      script: |
+        cd ${{ name }}
+        ${PYTHON} -m pip install . -vv --no-deps
     requirements:
       host:
         - python ${{ python_min }}.*
@@ -190,7 +202,9 @@ outputs:
       name: ${{ name }}-google
     build:
       noarch: python
-      script: build_${{ name }}-google.sh
+      script: |
+        cd ${{ name }}
+        ${PYTHON} -m pip install . -vv --no-deps
     requirements:
       host:
         - python ${{ python_min }}.*
@@ -218,7 +232,9 @@ outputs:
       name: ${{ name }}-ft
     build:
       noarch: python
-      script: build_${{ name }}-ft.sh
+      script: |
+        cd ${{ name }}
+        ${PYTHON} -m pip install . -vv --no-deps
     requirements:
       host:
         - python ${{ python_min }}.*
@@ -248,7 +264,9 @@ outputs:
       name: ${{ name }}
     build:
       noarch: python
-      script: build_${{ name }}.sh
+      script: |
+        cd ${{ name }}
+        ${PYTHON} -m pip install . -vv --no-deps
     requirements:
       host:
         - python ${{ python_min }}.*
