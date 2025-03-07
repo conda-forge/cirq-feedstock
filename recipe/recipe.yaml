@@ -228,37 +228,6 @@ outputs:
       license_file: ${{ name }}-google/LICENSE
 
   - package:
-      name: ${{ name }}-ft
-    build:
-      noarch: python
-      script: |
-        cd cirq-ft
-        ${PYTHON} -m pip install . -vv --no-deps
-    requirements:
-      host:
-        - python ${{ python_min }}.*
-        - pip
-        - setuptools
-      run:
-        - python >=${{ python_min }}
-        - ${{ name }}-core ==${{ version }}
-        - cachetools >=5.3
-        - ipywidgets
-        - nbconvert
-        - nbformat
-    tests:
-      - python:
-          imports:
-            - ${{ name }}_ft
-    about:
-      homepage: ${{ home }}
-      summary: ${{ summary }}
-      repository: https://github.com/quantumlib/Cirq/tree/master/cirq-ft
-      documentation: ${{ doc_url }}
-      license: Apache-2.0
-      license_file: ${{ name }}-ft/LICENSE
-
-  - package:
       name: ${{ name }}
     build:
       noarch: python
