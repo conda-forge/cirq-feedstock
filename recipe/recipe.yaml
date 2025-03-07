@@ -6,7 +6,6 @@ context:
   home: https://quantumai.google/cirq
   summary: An open source framework for programming quantum computers
   doc_url: https://quantumai.google/cirq/install
-  license_file: LICENSE
   python_min: 3.9
 
 recipe:
@@ -56,7 +55,7 @@ outputs:
       repository: https://github.com/quantumlib/Cirq/tree/master/cirq-core
       documentation: ${{ doc_url }}
       license: Apache-2.0
-      license_file: ${{ name }}-core/${{ license_file }}
+      license_file: ${{ name }}-core/LICENSE
 
   - package:
       name: ${{ name }}-aqt
@@ -84,7 +83,7 @@ outputs:
       repository: https://github.com/quantumlib/Cirq/tree/master/cirq-aqt
       documentation: ${{ doc_url }}
       license: Apache-2.0
-      license_file: ${{ name }}-aqt/${{ license_file }}
+      license_file: ${{ name }}-aqt/LICENSE
 
   - package:
       name: ${{ name }}-web
@@ -111,7 +110,7 @@ outputs:
       repository: https://github.com/quantumlib/Cirq/tree/master/cirq-web
       documentation: ${{ doc_url }}
       license: Apache-2.0
-      license_file: ${{ name }}-web/${{ license_file }}
+      license_file: ${{ name }}-web/LICENSE
 
   - package:
       name: ${{ name }}-rigetti
@@ -139,7 +138,7 @@ outputs:
       repository: https://github.com/quantumlib/Cirq/tree/master/cirq-rigetti
       documentation: ${{ doc_url }}
       license: Apache-2.0
-      license_file: ${{ name }}-rigetti/${{ license_file }}
+      license_file: ${{ name }}-rigetti/LICENSE
 
   - package:
       name: ${{ name }}-pasqal
@@ -167,7 +166,7 @@ outputs:
       repository: https://github.com/quantumlib/Cirq/tree/master/cirq-pasqal
       documentation: ${{ doc_url }}
       license: Apache-2.0
-      license_file: ${{ name }}-pasqal/${{ license_file }}
+      license_file: ${{ name }}-pasqal/LICENSE
 
   - package:
       name: ${{ name }}-ionq
@@ -195,7 +194,7 @@ outputs:
       repository: https://github.com/quantumlib/Cirq/tree/master/cirq-ionq
       documentation: ${{ doc_url }}
       license: Apache-2.0
-      license_file: ${{ name }}-ionq/${{ license_file }}
+      license_file: ${{ name }}-ionq/LICENSE
 
   - package:
       name: ${{ name }}-google
@@ -225,7 +224,7 @@ outputs:
       repository: https://github.com/quantumlib/Cirq/tree/master/cirq-google
       documentation: ${{ doc_url }}
       license: Apache-2.0
-      license_file: ${{ name }}-google/${{ license_file }}
+      license_file: ${{ name }}-google/LICENSE
 
   - package:
       name: ${{ name }}-ft
@@ -257,7 +256,7 @@ outputs:
       repository: https://github.com/quantumlib/Cirq/tree/master/cirq-ft
       documentation: ${{ doc_url }}
       license: Apache-2.0
-      license_file: ${{ name }}-ft/${{ license_file }}
+      license_file: ${{ name }}-ft/LICENSE
 
   - package:
       name: ${{ name }}
@@ -289,7 +288,7 @@ outputs:
       repository: https://github.com/quantumlib/Cirq
       documentation: ${{ doc_url }}
       license: Apache-2.0
-      license_file: ${{ license_file }}
+      license_file: LICENSE
 
 about:
   homepage: ${{ home }}
@@ -300,7 +299,7 @@ about:
   repository: https://github.com/quantumlib/Cirq
   documentation: ${{ doc_url }}
   license: Apache-2.0
-  license_file: ${{ license_file }}
+  license_file: LICENSE
 
 extra:
   recipe-maintainers:
