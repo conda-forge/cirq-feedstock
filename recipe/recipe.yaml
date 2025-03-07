@@ -1,0 +1,310 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/prefix-dev/recipe-format/73cd2eed94c576213c5f25ab57adf6d8c83e792a/schema.json
+schema_version: 1
+
+context:
+  name: "cirq"
+  version: "1.3.0"
+  home: "https://quantumai.google/cirq"
+  summary: "An open source framework for programming quantum computers"
+  doc_url: "https://quantumai.google/cirq/install"
+  license_file: "LICENSE"
+  python_min: "3.9"
+
+recipe:
+  name: ${{ name }}-meta
+  version: ${{ version }}
+
+source:
+  url: https://github.com/quantumlib/Cirq/archive/refs/tags/v${{ version }}.tar.gz
+  sha256: c72329be02493b8751f176c5b99277c7892b9e1c025d7ab8e4b2f4d9fe79cd8b
+
+build:
+  number: 2
+  noarch: python
+
+outputs:
+  - package:
+      name: ${{ name }}-core
+    build:
+      noarch: python
+      script: |
+        cd cirq-core
+        ${PYTHON} -m pip install . -vv --no-deps
+    requirements:
+      host:
+        - python ${{ python_min }}.*
+        - pip
+        - setuptools
+      run:
+        - python >=${{ python_min }}
+        - duet-python >=0.2.8,<0.3
+        - matplotlib-base >=3.0,<4
+        - networkx >=2.4
+        - numpy >=1.16,<2
+        - pandas
+        - sortedcontainers >=2.0,<3
+        - scipy
+        - sympy
+        - typing_extensions >=4.2
+        - tqdm
+    tests:
+      - python:
+          imports:
+            - ${{ name }}
+    about:
+      homepage: ${{ home }}
+      summary: ${{ summary }}
+      repository: https://github.com/quantumlib/Cirq/tree/master/cirq-core
+      documentation: ${{ doc_url }}
+      license: Apache-2.0
+      license_file: ${{ name }}-core/${{ license_file }}
+
+  - package:
+      name: ${{ name }}-aqt
+    build:
+      noarch: python
+      script: |
+        cd cirq-aqt
+        ${PYTHON} -m pip install . -vv --no-deps
+    requirements:
+      host:
+        - python ${{ python_min }}.*
+        - pip
+        - setuptools
+      run:
+        - python >=${{ python_min }}
+        - ${{ name }}-core ==${{ version }}
+        - requests >=2.18,<3
+    tests:
+      - python:
+          imports:
+            - ${{ name }}_aqt
+    about:
+      homepage: ${{ home }}
+      summary: ${{ summary }}
+      repository: https://github.com/quantumlib/Cirq/tree/master/cirq-aqt
+      documentation: ${{ doc_url }}
+      license: Apache-2.0
+      license_file: ${{ name }}-aqt/${{ license_file }}
+
+  - package:
+      name: ${{ name }}-web
+    build:
+      noarch: python
+      script: |
+        cd cirq-web
+        ${PYTHON} -m pip install . -vv --no-deps
+    requirements:
+      host:
+        - python ${{ python_min }}.*
+        - pip
+        - setuptools
+      run:
+        - python >=${{ python_min }}
+        - ${{ name }}-core ==${{ version }}
+    tests:
+      - python:
+          imports:
+            - ${{ name }}_web
+    about:
+      homepage: ${{ home }}
+      summary: ${{ summary }}
+      repository: https://github.com/quantumlib/Cirq/tree/master/cirq-web
+      documentation: ${{ doc_url }}
+      license: Apache-2.0
+      license_file: ${{ name }}-web/${{ license_file }}
+
+  - package:
+      name: ${{ name }}-rigetti
+    build:
+      noarch: python
+      script: |
+        cd cirq-rigetti
+        ${PYTHON} -m pip install . -vv --no-deps
+    requirements:
+      host:
+        - python ${{ python_min }}.*
+        - pip
+        - setuptools
+      run:
+        - python >=${{ python_min }}
+        - ${{ name }}-core ==${{ version }}
+        - pyquil >=3.2.0, <4.0.0
+    tests:
+      - python:
+          imports:
+            - ${{ name }}_rigetti
+    about:
+      homepage: ${{ home }}
+      summary: ${{ summary }}
+      repository: https://github.com/quantumlib/Cirq/tree/master/cirq-rigetti
+      documentation: ${{ doc_url }}
+      license: Apache-2.0
+      license_file: ${{ name }}-rigetti/${{ license_file }}
+
+  - package:
+      name: ${{ name }}-pasqal
+    build:
+      noarch: python
+      script: |
+        cd cirq-pasqal
+        ${PYTHON} -m pip install . -vv --no-deps
+    requirements:
+      host:
+        - python ${{ python_min }}.*
+        - pip
+        - setuptools
+      run:
+        - python >=${{ python_min }}
+        - ${{ name }}-core ==${{ version }}
+        - requests >=2.18,<3
+    tests:
+      - python:
+          imports:
+            - ${{ name }}_pasqal
+    about:
+      homepage: ${{ home }}
+      summary: ${{ summary }}
+      repository: https://github.com/quantumlib/Cirq/tree/master/cirq-pasqal
+      documentation: ${{ doc_url }}
+      license: Apache-2.0
+      license_file: ${{ name }}-pasqal/${{ license_file }}
+
+  - package:
+      name: ${{ name }}-ionq
+    build:
+      noarch: python
+      script: |
+        cd cirq-ionq
+        ${PYTHON} -m pip install . -vv --no-deps
+    requirements:
+      host:
+        - python ${{ python_min }}.*
+        - pip
+        - setuptools
+      run:
+        - python >=${{ python_min }}
+        - ${{ name }}-core ==${{ version }}
+        - requests >=2.18,<3
+    tests:
+      - python:
+          imports:
+            - ${{ name }}_ionq
+    about:
+      homepage: ${{ home }}
+      summary: ${{ summary }}
+      repository: https://github.com/quantumlib/Cirq/tree/master/cirq-ionq
+      documentation: ${{ doc_url }}
+      license: Apache-2.0
+      license_file: ${{ name }}-ionq/${{ license_file }}
+
+  - package:
+      name: ${{ name }}-google
+    build:
+      noarch: python
+      script: |
+        cd cirq-google
+        ${PYTHON} -m pip install . -vv --no-deps
+    requirements:
+      host:
+        - python ${{ python_min }}.*
+        - pip
+        - setuptools
+      run:
+        - python >=${{ python_min }}
+        - ${{ name }}-core ==${{ version }}
+        - google-api-core-grpc >=1.14.0
+        - protobuf >=3.15.0
+        - proto-plus >=1.20.0
+    tests:
+      - python:
+          imports:
+            - ${{ name }}_google
+    about:
+      homepage: ${{ home }}
+      summary: ${{ summary }}
+      repository: https://github.com/quantumlib/Cirq/tree/master/cirq-google
+      documentation: ${{ doc_url }}
+      license: Apache-2.0
+      license_file: ${{ name }}-google/${{ license_file }}
+
+  - package:
+      name: ${{ name }}-ft
+    build:
+      noarch: python
+      script: |
+        cd cirq-ft
+        ${PYTHON} -m pip install . -vv --no-deps
+    requirements:
+      host:
+        - python ${{ python_min }}.*
+        - pip
+        - setuptools
+      run:
+        - python >=${{ python_min }}
+        - ${{ name }}-core ==${{ version }}
+        - attrs
+        - cachetools >=5.3
+        - ipywidgets
+        - nbconvert
+        - nbformat
+    tests:
+      - python:
+          imports:
+            - ${{ name }}_ft
+    about:
+      homepage: ${{ home }}
+      summary: ${{ summary }}
+      repository: https://github.com/quantumlib/Cirq/tree/master/cirq-ft
+      documentation: ${{ doc_url }}
+      license: Apache-2.0
+      license_file: ${{ name }}-ft/${{ license_file }}
+
+  - package:
+      name: ${{ name }}
+    build:
+      noarch: python
+      script: ${PYTHON} -m pip install . -vv --no-deps
+    requirements:
+      host:
+        - python ${{ python_min }}.*
+        - pip
+        - setuptools
+      run:
+        - python >=${{ python_min }}
+        - ${{ name }}-aqt ==${{ version }}
+        - ${{ name }}-core ==${{ version }}
+        - ${{ name }}-google ==${{ version }}
+        - ${{ name }}-ionq ==${{ version }}
+        - ${{ name }}-pasqal ==${{ version }}
+        - ${{ name }}-ft ==${{ version }}
+        - ${{ name }}-rigetti ==${{ version }}
+        - ${{ name }}-web ==${{ version }}
+    tests:
+      - python:
+          imports:
+            - ${{ name }}
+    about:
+      homepage: ${{ home }}
+      summary: ${{ summary }}
+      repository: https://github.com/quantumlib/Cirq
+      documentation: ${{ doc_url }}
+      license: Apache-2.0
+      license_file: ${{ license_file }}
+
+about:
+  homepage: ${{ home }}
+  summary: ${{ summary }}
+  description: |
+    Cirq is a Python library for writing, manipulating, and optimizing quantum
+    circuits and running them against quantum computers and simulators.
+  repository: https://github.com/quantumlib/Cirq
+  documentation: ${{ doc_url }}
+  license: Apache-2.0
+  license_file: ${{ license_file }}
+
+extra:
+  recipe-maintainers:
+    - basnijholt
+    - BastianZim
+  feedstock-name: ${{ name }}

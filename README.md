@@ -20,33 +20,6 @@ Documentation: https://quantumai.google/cirq/install
 Cirq is a Python library for writing, manipulating, and optimizing quantum
 circuits and running them against quantum computers and simulators.
 
-
-About cirq-core
----------------
-
-Home: https://quantumai.google/cirq
-
-Package license: Apache-2.0
-
-Summary: An open source framework for programming quantum computers
-
-Development: https://github.com/quantumlib/Cirq/tree/master/cirq-core
-
-Documentation: https://quantumai.google/cirq/install
-
-About cirq-aqt
---------------
-
-Home: https://quantumai.google/cirq
-
-Package license: Apache-2.0
-
-Summary: An open source framework for programming quantum computers
-
-Development: https://github.com/quantumlib/Cirq/tree/master/cirq-aqt
-
-Documentation: https://quantumai.google/cirq/install
-
 About cirq-ft
 -------------
 
@@ -59,6 +32,9 @@ Summary: An open source framework for programming quantum computers
 Development: https://github.com/quantumlib/Cirq/tree/master/cirq-ft
 
 Documentation: https://quantumai.google/cirq/install
+
+Cirq is a Python library for writing, manipulating, and optimizing quantum
+circuits and running them against quantum computers and simulators.
 
 About cirq-google
 -----------------
@@ -73,6 +49,9 @@ Development: https://github.com/quantumlib/Cirq/tree/master/cirq-google
 
 Documentation: https://quantumai.google/cirq/install
 
+Cirq is a Python library for writing, manipulating, and optimizing quantum
+circuits and running them against quantum computers and simulators.
+
 About cirq-ionq
 ---------------
 
@@ -85,6 +64,9 @@ Summary: An open source framework for programming quantum computers
 Development: https://github.com/quantumlib/Cirq/tree/master/cirq-ionq
 
 Documentation: https://quantumai.google/cirq/install
+
+Cirq is a Python library for writing, manipulating, and optimizing quantum
+circuits and running them against quantum computers and simulators.
 
 About cirq-pasqal
 -----------------
@@ -99,6 +81,9 @@ Development: https://github.com/quantumlib/Cirq/tree/master/cirq-pasqal
 
 Documentation: https://quantumai.google/cirq/install
 
+Cirq is a Python library for writing, manipulating, and optimizing quantum
+circuits and running them against quantum computers and simulators.
+
 About cirq-rigetti
 ------------------
 
@@ -111,6 +96,9 @@ Summary: An open source framework for programming quantum computers
 Development: https://github.com/quantumlib/Cirq/tree/master/cirq-rigetti
 
 Documentation: https://quantumai.google/cirq/install
+
+Cirq is a Python library for writing, manipulating, and optimizing quantum
+circuits and running them against quantum computers and simulators.
 
 About cirq-web
 --------------
@@ -125,8 +113,11 @@ Development: https://github.com/quantumlib/Cirq/tree/master/cirq-web
 
 Documentation: https://quantumai.google/cirq/install
 
-About cirq
-----------
+Cirq is a Python library for writing, manipulating, and optimizing quantum
+circuits and running them against quantum computers and simulators.
+
+About cirq-aqt
+--------------
 
 Home: https://quantumai.google/cirq
 
@@ -134,9 +125,28 @@ Package license: Apache-2.0
 
 Summary: An open source framework for programming quantum computers
 
-Development: https://github.com/quantumlib/Cirq
+Development: https://github.com/quantumlib/Cirq/tree/master/cirq-aqt
 
 Documentation: https://quantumai.google/cirq/install
+
+Cirq is a Python library for writing, manipulating, and optimizing quantum
+circuits and running them against quantum computers and simulators.
+
+About cirq-core
+---------------
+
+Home: https://quantumai.google/cirq
+
+Package license: Apache-2.0
+
+Summary: An open source framework for programming quantum computers
+
+Development: https://github.com/quantumlib/Cirq/tree/master/cirq-core
+
+Documentation: https://quantumai.google/cirq/install
+
+Cirq is a Python library for writing, manipulating, and optimizing quantum
+circuits and running them against quantum computers and simulators.
 
 Current build status
 ====================
