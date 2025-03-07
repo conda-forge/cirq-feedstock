@@ -8,7 +8,6 @@ context:
   summary: "An open source framework for programming quantum computers"
   doc_url: "https://quantumai.google/cirq/install"
   license_file: "LICENSE"
-  python_ver: ">=3.9"
   python_min: "3.9"
 
 recipe:
@@ -31,16 +30,16 @@ outputs:
       script: build_${{ name }}-core.sh
     requirements:
       host:
+        - python ${{ python_min }}.*
         - pip
-        - python ${{ python_ver }}
         - setuptools
       run:
+        - python >=${{ python_min }}
         - duet-python >=0.2.8,<0.3
         - matplotlib-base >=3.0,<4
         - networkx >=2.4
         - numpy >=1.16,<2
         - pandas
-        - python ${{ python_ver }}
         - sortedcontainers >=2.0,<3
         - scipy
         - sympy
@@ -65,13 +64,13 @@ outputs:
       script: build_${{ name }}-aqt.sh
     requirements:
       host:
+        - python ${{ python_min }}.*
         - pip
-        - python ${{ python_ver }}
         - setuptools
       run:
+        - python >=${{ python_min }}
         - ${{ name }}-core ==${{ version }}
         - requests >=2.18,<3
-        - python ${{ python_ver }}
     tests:
       - python:
           imports:
@@ -91,12 +90,12 @@ outputs:
       script: build_${{ name }}-web.sh
     requirements:
       host:
+        - python ${{ python_min }}.*
         - pip
-        - python ${{ python_ver }}
         - setuptools
       run:
+        - python >=${{ python_min }}
         - ${{ name }}-core ==${{ version }}
-        - python ${{ python_ver }}
     tests:
       - python:
           imports:
@@ -116,13 +115,13 @@ outputs:
       script: build_${{ name }}-rigetti.sh
     requirements:
       host:
+        - python ${{ python_min }}.*
         - pip
-        - python ${{ python_ver }}
         - setuptools
       run:
+        - python >=${{ python_min }}
         - ${{ name }}-core ==${{ version }}
         - pyquil >=3.2.0, <4.0.0
-        - python ${{ python_ver }}
     tests:
       - python:
           imports:
@@ -142,13 +141,13 @@ outputs:
       script: build_${{ name }}-pasqal.sh
     requirements:
       host:
+        - python ${{ python_min }}.*
         - pip
-        - python ${{ python_ver }}
         - setuptools
       run:
+        - python >=${{ python_min }}
         - ${{ name }}-core ==${{ version }}
         - requests >=2.18,<3
-        - python ${{ python_ver }}
     tests:
       - python:
           imports:
@@ -168,13 +167,13 @@ outputs:
       script: build_${{ name }}-ionq.sh
     requirements:
       host:
+        - python ${{ python_min }}.*
         - pip
-        - python ${{ python_ver }}
         - setuptools
       run:
+        - python >=${{ python_min }}
         - ${{ name }}-core ==${{ version }}
         - requests >=2.18,<3
-        - python ${{ python_ver }}
     tests:
       - python:
           imports:
@@ -194,15 +193,15 @@ outputs:
       script: build_${{ name }}-google.sh
     requirements:
       host:
+        - python ${{ python_min }}.*
         - pip
-        - python ${{ python_ver }}
         - setuptools
       run:
+        - python >=${{ python_min }}
         - ${{ name }}-core ==${{ version }}
         - google-api-core-grpc >=1.14.0
         - protobuf >=3.15.0
         - proto-plus >=1.20.0
-        - python ${{ python_ver }}
     tests:
       - python:
           imports:
@@ -222,17 +221,17 @@ outputs:
       script: build_${{ name }}-ft.sh
     requirements:
       host:
+        - python ${{ python_min }}.*
         - pip
-        - python ${{ python_ver }}
         - setuptools
       run:
+        - python >=${{ python_min }}
         - ${{ name }}-core ==${{ version }}
         - attrs
         - cachetools >=5.3
         - ipywidgets
         - nbconvert
         - nbformat
-        - python ${{ python_ver }}
     tests:
       - python:
           imports:
@@ -252,10 +251,11 @@ outputs:
       script: build_${{ name }}.sh
     requirements:
       host:
+        - python ${{ python_min }}.*
         - pip
-        - python ${{ python_ver }}
         - setuptools
       run:
+        - python >=${{ python_min }}
         - ${{ name }}-aqt ==${{ version }}
         - ${{ name }}-core ==${{ version }}
         - ${{ name }}-google ==${{ version }}
@@ -264,7 +264,6 @@ outputs:
         - ${{ name }}-ft ==${{ version }}
         - ${{ name }}-rigetti ==${{ version }}
         - ${{ name }}-web ==${{ version }}
-        - python ${{ python_ver }}
     tests:
       - python:
           imports:
