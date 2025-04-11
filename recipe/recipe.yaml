@@ -2,11 +2,11 @@ schema_version: 1
 
 context:
   name: cirq
-  version: 1.4.1
+  version: "1.5.0"
   home: https://quantumai.google/cirq
   summary: An open source framework for programming quantum computers
   doc_url: https://quantumai.google/cirq/install
-  python_min: 3.10
+  python_min: '3.10'
 
 recipe:
   name: ${{ name }}-meta
@@ -14,7 +14,7 @@ recipe:
 
 source:
   url: https://github.com/quantumlib/Cirq/archive/refs/tags/v${{ version }}.tar.gz
-  sha256: c527be0d4edf811edad806a49b498191cf344917a212567008e02794defe3bf6
+  sha256: ff1622dea7de12e58fc47458e30d576c9a5a4faba5fd85bc6849150d1da3fc7f
 
 build:
   number: 0
