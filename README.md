@@ -20,6 +20,38 @@ Documentation: https://quantumai.google/cirq/install
 Cirq is a Python library for writing, manipulating, and optimizing quantum
 circuits and running them against quantum computers and simulators.
 
+About cirq-aqt
+--------------
+
+Home: https://quantumai.google/cirq
+
+Package license: Apache-2.0
+
+Summary: An open source framework for programming quantum computers
+
+Development: https://github.com/quantumlib/Cirq/tree/master/cirq-aqt
+
+Documentation: https://quantumai.google/cirq/install
+
+Cirq is a Python library for writing, manipulating, and optimizing quantum
+circuits and running them against quantum computers and simulators.
+
+About cirq-core
+---------------
+
+Home: https://quantumai.google/cirq
+
+Package license: Apache-2.0
+
+Summary: An open source framework for programming quantum computers
+
+Development: https://github.com/quantumlib/Cirq/tree/master/cirq-core
+
+Documentation: https://quantumai.google/cirq/install
+
+Cirq is a Python library for writing, manipulating, and optimizing quantum
+circuits and running them against quantum computers and simulators.
+
 About cirq-google
 -----------------
 
@@ -94,38 +126,6 @@ Package license: Apache-2.0
 Summary: An open source framework for programming quantum computers
 
 Development: https://github.com/quantumlib/Cirq/tree/master/cirq-web
-
-Documentation: https://quantumai.google/cirq/install
-
-Cirq is a Python library for writing, manipulating, and optimizing quantum
-circuits and running them against quantum computers and simulators.
-
-About cirq-aqt
---------------
-
-Home: https://quantumai.google/cirq
-
-Package license: Apache-2.0
-
-Summary: An open source framework for programming quantum computers
-
-Development: https://github.com/quantumlib/Cirq/tree/master/cirq-aqt
-
-Documentation: https://quantumai.google/cirq/install
-
-Cirq is a Python library for writing, manipulating, and optimizing quantum
-circuits and running them against quantum computers and simulators.
-
-About cirq-core
----------------
-
-Home: https://quantumai.google/cirq
-
-Package license: Apache-2.0
-
-Summary: An open source framework for programming quantum computers
-
-Development: https://github.com/quantumlib/Cirq/tree/master/cirq-core
 
 Documentation: https://quantumai.google/cirq/install
 
