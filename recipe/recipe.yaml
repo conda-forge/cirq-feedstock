@@ -2,9 +2,11 @@ schema_version: 1
 
 context:
   name: cirq
-  version: 1.4.1
+  version: 1.5.0
   home: https://quantumai.google/cirq
-  summary: An open source framework for programming quantum computers
+  summary: >-
+    Python package for writing, manipulating, and running quantum circuits
+    on quantum computers.
   doc_url: https://quantumai.google/cirq/install
   python_min: 3.10
 
@@ -14,7 +16,7 @@ recipe:
 
 source:
   url: https://github.com/quantumlib/Cirq/archive/refs/tags/v${{ version }}.tar.gz
-  sha256: c527be0d4edf811edad806a49b498191cf344917a212567008e02794defe3bf6
+  sha256: ff1622dea7de12e58fc47458e30d576c9a5a4faba5fd85bc6849150d1da3fc7f
 
 build:
   number: 0
@@ -32,19 +34,19 @@ outputs:
       host:
         - python ${{ python_min }}.*
         - pip
-        - setuptools
+        - setuptools >=70
       run:
         - python >=${{ python_min }}
-        - attrs >=21.3.0
+        - attrs >=25.3.0
         - duet-python >=0.2.8
         - matplotlib-base >=3.0,<4
-        - networkx >=2.4
-        - numpy >=1.22,<2
+        - networkx >=3.4.0
+        - numpy >=1.26
         - pandas
         - sortedcontainers >=2.0,<3
         - scipy >=1.0,<2
         - sympy
-        - typing_extensions >=4.2
+        - typing_extensions >=4.14.0
         - tqdm
     tests:
       - python:
@@ -69,11 +71,11 @@ outputs:
       host:
         - python ${{ python_min }}.*
         - pip
-        - setuptools
+        - setuptools >=70
       run:
         - python >=${{ python_min }}
         - ${{ name }}-core ==${{ version }}
-        - requests >=2.18,<3
+        - requests >=2.32.4,<3
     tests:
       - python:
           imports:
@@ -97,7 +99,7 @@ outputs:
       host:
         - python ${{ python_min }}.*
         - pip
-        - setuptools
+        - setuptools >=70
       run:
         - python >=${{ python_min }}
         - ${{ name }}-core ==${{ version }}
@@ -114,34 +116,6 @@ outputs:
       license_file: ${{ name }}-web/LICENSE
 
   - package:
-      name: ${{ name }}-rigetti
-    build:
-      noarch: python
-      script: |
-        cd cirq-rigetti
-        ${PYTHON} -m pip install . -vv --no-deps
-    requirements:
-      host:
-        - python ${{ python_min }}.*
-        - pip
-        - setuptools
-      run:
-        - python >=${{ python_min }}
-        - ${{ name }}-core ==${{ version }}
-        - pyquil >=4.11.0, <5.0.0
-    tests:
-      - python:
-          imports:
-            - ${{ name }}_rigetti
-    about:
-      homepage: ${{ home }}
-      summary: ${{ summary }}
-      repository: https://github.com/quantumlib/Cirq/tree/master/cirq-rigetti
-      documentation: ${{ doc_url }}
-      license: Apache-2.0
-      license_file: ${{ name }}-rigetti/LICENSE
-
-  - package:
       name: ${{ name }}-pasqal
     build:
       noarch: python
@@ -152,11 +126,11 @@ outputs:
       host:
         - python ${{ python_min }}.*
         - pip
-        - setuptools
+        - setuptools >=70
       run:
         - python >=${{ python_min }}
         - ${{ name }}-core ==${{ version }}
-        - requests >=2.18,<3
+        - requests >=2.32.4,<3
     tests:
       - python:
           imports:
@@ -180,11 +154,11 @@ outputs:
       host:
         - python ${{ python_min }}.*
         - pip
-        - setuptools
+        - setuptools >=70
       run:
         - python >=${{ python_min }}
         - ${{ name }}-core ==${{ version }}
-        - requests >=2.18,<3
+        - requests >=2.32.4,<3
     tests:
       - python:
           imports:
@@ -208,13 +182,13 @@ outputs:
       host:
         - python ${{ python_min }}.*
         - pip
-        - setuptools
+        - setuptools >=70
       run:
         - python >=${{ python_min }}
         - ${{ name }}-core ==${{ version }}
         - google-api-core-grpc >=1.14.0
-        - protobuf >=3.15.0, <5
-        - proto-plus >=1.20.0
+        - protobuf >=5.29.5, <6
+        - proto-plus >=1.26.0
     tests:
       - python:
           imports:
@@ -236,7 +210,7 @@ outputs:
       host:
         - python ${{ python_min }}.*
         - pip
-        - setuptools
+        - setuptools >=70
       run:
         - python >=${{ python_min }}
         - ${{ name }}-aqt ==${{ version }}
@@ -261,9 +235,12 @@ outputs:
 about:
   homepage: ${{ home }}
   summary: ${{ summary }}
-  description: |
+  description: >-
     Cirq is a Python library for writing, manipulating, and optimizing quantum
-    circuits and running them against quantum computers and simulators.
+    circuits and running them against quantum computers and simulators. It
+    provides useful abstractions for dealing with today’s noisy
+    intermediate-scale quantum (NISQ) computers, where the details of quantum
+    hardware are vital to achieving state-of-the-art results.
   repository: https://github.com/quantumlib/Cirq
   documentation: ${{ doc_url }}
   license: Apache-2.0
