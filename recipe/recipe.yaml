@@ -116,6 +116,34 @@ outputs:
       license_file: ${{ name }}-web/LICENSE
 
   - package:
+      name: ${{ name }}-rigetti
+    build:
+      noarch: python
+      script: |
+        cd cirq-rigetti
+        ${PYTHON} -m pip install . -vv --no-deps
+    requirements:
+      host:
+        - python ${{ python_min }}.*
+        - pip
+        - setuptools >=70
+      run:
+        - python >=${{ python_min }}
+        - ${{ name }}-core ==${{ version }}
+        - pyquil >=4.11.0, <5.0.0
+    tests:
+      - python:
+          imports:
+            - ${{ name }}_rigetti
+    about:
+      homepage: ${{ home }}
+      summary: ${{ summary }}
+      repository: https://github.com/quantumlib/Cirq/tree/master/cirq-rigetti
+      documentation: ${{ doc_url }}
+      license: Apache-2.0
+      license_file: ${{ name }}-rigetti/LICENSE
+
+  - package:
       name: ${{ name }}-pasqal
     build:
       noarch: python

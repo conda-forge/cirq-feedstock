@@ -94,6 +94,21 @@ Documentation: https://quantumai.google/cirq/install
 
 Cirq is a Python library for writing, manipulating, and optimizing quantum circuits and running them against quantum computers and simulators. It provides useful abstractions for dealing with today’s noisy intermediate-scale quantum (NISQ) computers, where the details of quantum hardware are vital to achieving state-of-the-art results.
 
+About cirq-rigetti
+------------------
+
+Home: https://quantumai.google/cirq
+
+Package license: Apache-2.0
+
+Summary: Python package for writing, manipulating, and running quantum circuits on quantum computers.
+
+Development: https://github.com/quantumlib/Cirq/tree/master/cirq-rigetti
+
+Documentation: https://quantumai.google/cirq/install
+
+Cirq is a Python library for writing, manipulating, and optimizing quantum circuits and running them against quantum computers and simulators. It provides useful abstractions for dealing with today’s noisy intermediate-scale quantum (NISQ) computers, where the details of quantum hardware are vital to achieving state-of-the-art results.
+
 About cirq-web
 --------------
 
@@ -133,6 +148,7 @@ Current release info
 | [![Conda Recipe](https://img.shields.io/badge/recipe-cirq--google-green.svg)](https://anaconda.org/conda-forge/cirq-google) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/cirq-google.svg)](https://anaconda.org/conda-forge/cirq-google) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/cirq-google.svg)](https://anaconda.org/conda-forge/cirq-google) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/cirq-google.svg)](https://anaconda.org/conda-forge/cirq-google) |
 | [![Conda Recipe](https://img.shields.io/badge/recipe-cirq--ionq-green.svg)](https://anaconda.org/conda-forge/cirq-ionq) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/cirq-ionq.svg)](https://anaconda.org/conda-forge/cirq-ionq) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/cirq-ionq.svg)](https://anaconda.org/conda-forge/cirq-ionq) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/cirq-ionq.svg)](https://anaconda.org/conda-forge/cirq-ionq) |
 | [![Conda Recipe](https://img.shields.io/badge/recipe-cirq--pasqal-green.svg)](https://anaconda.org/conda-forge/cirq-pasqal) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/cirq-pasqal.svg)](https://anaconda.org/conda-forge/cirq-pasqal) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/cirq-pasqal.svg)](https://anaconda.org/conda-forge/cirq-pasqal) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/cirq-pasqal.svg)](https://anaconda.org/conda-forge/cirq-pasqal) |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-cirq--rigetti-green.svg)](https://anaconda.org/conda-forge/cirq-rigetti) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/cirq-rigetti.svg)](https://anaconda.org/conda-forge/cirq-rigetti) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/cirq-rigetti.svg)](https://anaconda.org/conda-forge/cirq-rigetti) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/cirq-rigetti.svg)](https://anaconda.org/conda-forge/cirq-rigetti) |
 | [![Conda Recipe](https://img.shields.io/badge/recipe-cirq--web-green.svg)](https://anaconda.org/conda-forge/cirq-web) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/cirq-web.svg)](https://anaconda.org/conda-forge/cirq-web) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/cirq-web.svg)](https://anaconda.org/conda-forge/cirq-web) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/cirq-web.svg)](https://anaconda.org/conda-forge/cirq-web) |
 
 Installing cirq
@@ -145,16 +161,16 @@ conda config --add channels conda-forge
 conda config --set channel_priority strict
 ```
 
-Once the `conda-forge` channel has been enabled, `cirq, cirq-aqt, cirq-core, cirq-google, cirq-ionq, cirq-pasqal, cirq-web` can be installed with `conda`:
+Once the `conda-forge` channel has been enabled, `cirq, cirq-aqt, cirq-core, cirq-google, cirq-ionq, cirq-pasqal, cirq-rigetti, cirq-web` can be installed with `conda`:
 
 ```
-conda install cirq cirq-aqt cirq-core cirq-google cirq-ionq cirq-pasqal cirq-web
+conda install cirq cirq-aqt cirq-core cirq-google cirq-ionq cirq-pasqal cirq-rigetti cirq-web
 ```
 
 or with `mamba`:
 
 ```
-mamba install cirq cirq-aqt cirq-core cirq-google cirq-ionq cirq-pasqal cirq-web
+mamba install cirq cirq-aqt cirq-core cirq-google cirq-ionq cirq-pasqal cirq-rigetti cirq-web
 ```
 
 It is possible to list all of the versions of `cirq` available on your platform with `conda`:
