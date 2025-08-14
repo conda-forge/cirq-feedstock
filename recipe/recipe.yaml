@@ -1,7 +1,7 @@
 schema_version: 1
 
 context:
-  version: "1.5.0"
+  version: "1.6.1"
   home: https://quantumai.google/cirq
   summary: >-
     Python package for writing, manipulating, and running quantum circuits
@@ -15,7 +15,7 @@ recipe:
 
 source:
   url: https://github.com/quantumlib/Cirq/archive/refs/tags/v${{ version }}.tar.gz
-  sha256: ff1622dea7de12e58fc47458e30d576c9a5a4faba5fd85bc6849150d1da3fc7f
+  sha256: 65da567eea507b5a2b2609fea8cb5e6a2b4e92a6622fad9c2a5c406761b09475
   patches:
     - patches/0001-allow-protobuf-v6.patch
 
