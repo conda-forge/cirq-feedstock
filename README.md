@@ -11,94 +11,13 @@ Home: https://quantumai.google/cirq
 
 Package license: Apache-2.0
 
-Summary: An open source framework for programming quantum computers
+Summary: Python package for writing, manipulating, and running quantum circuits on quantum computers.
 
 Development: https://github.com/quantumlib/Cirq
 
 Documentation: https://quantumai.google/cirq/install
 
-Cirq is a Python library for writing, manipulating, and optimizing quantum
-circuits and running them against quantum computers and simulators.
-
-About cirq-google
------------------
-
-Home: https://quantumai.google/cirq
-
-Package license: Apache-2.0
-
-Summary: An open source framework for programming quantum computers
-
-Development: https://github.com/quantumlib/Cirq/tree/master/cirq-google
-
-Documentation: https://quantumai.google/cirq/install
-
-Cirq is a Python library for writing, manipulating, and optimizing quantum
-circuits and running them against quantum computers and simulators.
-
-About cirq-ionq
----------------
-
-Home: https://quantumai.google/cirq
-
-Package license: Apache-2.0
-
-Summary: An open source framework for programming quantum computers
-
-Development: https://github.com/quantumlib/Cirq/tree/master/cirq-ionq
-
-Documentation: https://quantumai.google/cirq/install
-
-Cirq is a Python library for writing, manipulating, and optimizing quantum
-circuits and running them against quantum computers and simulators.
-
-About cirq-pasqal
------------------
-
-Home: https://quantumai.google/cirq
-
-Package license: Apache-2.0
-
-Summary: An open source framework for programming quantum computers
-
-Development: https://github.com/quantumlib/Cirq/tree/master/cirq-pasqal
-
-Documentation: https://quantumai.google/cirq/install
-
-Cirq is a Python library for writing, manipulating, and optimizing quantum
-circuits and running them against quantum computers and simulators.
-
-About cirq-rigetti
-------------------
-
-Home: https://quantumai.google/cirq
-
-Package license: Apache-2.0
-
-Summary: An open source framework for programming quantum computers
-
-Development: https://github.com/quantumlib/Cirq/tree/master/cirq-rigetti
-
-Documentation: https://quantumai.google/cirq/install
-
-Cirq is a Python library for writing, manipulating, and optimizing quantum
-circuits and running them against quantum computers and simulators.
-
-About cirq-web
---------------
-
-Home: https://quantumai.google/cirq
-
-Package license: Apache-2.0
-
-Summary: An open source framework for programming quantum computers
-
-Development: https://github.com/quantumlib/Cirq/tree/master/cirq-web
-
-Documentation: https://quantumai.google/cirq/install
-
-Cirq is a Python library for writing, manipulating, and optimizing quantum
-circuits and running them against quantum computers and simulators.
+Cirq is a Python library for writing, manipulating, and optimizing quantum circuits and running them against quantum computers and simulators. It provides useful abstractions for dealing with today’s noisy intermediate-scale quantum (NISQ) computers, where the details of quantum hardware are vital to achieving state-of-the-art results.
 
 About cirq-aqt
 --------------
@@ -107,14 +26,13 @@ Home: https://quantumai.google/cirq
 
 Package license: Apache-2.0
 
-Summary: An open source framework for programming quantum computers
+Summary: Python package for writing, manipulating, and running quantum circuits on quantum computers.
 
 Development: https://github.com/quantumlib/Cirq/tree/master/cirq-aqt
 
 Documentation: https://quantumai.google/cirq/install
 
-Cirq is a Python library for writing, manipulating, and optimizing quantum
-circuits and running them against quantum computers and simulators.
+Cirq is a Python library for writing, manipulating, and optimizing quantum circuits and running them against quantum computers and simulators. It provides useful abstractions for dealing with today’s noisy intermediate-scale quantum (NISQ) computers, where the details of quantum hardware are vital to achieving state-of-the-art results.
 
 About cirq-core
 ---------------
@@ -123,14 +41,88 @@ Home: https://quantumai.google/cirq
 
 Package license: Apache-2.0
 
-Summary: An open source framework for programming quantum computers
+Summary: Python package for writing, manipulating, and running quantum circuits on quantum computers.
 
 Development: https://github.com/quantumlib/Cirq/tree/master/cirq-core
 
 Documentation: https://quantumai.google/cirq/install
 
-Cirq is a Python library for writing, manipulating, and optimizing quantum
-circuits and running them against quantum computers and simulators.
+Cirq is a Python library for writing, manipulating, and optimizing quantum circuits and running them against quantum computers and simulators. It provides useful abstractions for dealing with today’s noisy intermediate-scale quantum (NISQ) computers, where the details of quantum hardware are vital to achieving state-of-the-art results.
+
+About cirq-google
+-----------------
+
+Home: https://quantumai.google/cirq
+
+Package license: Apache-2.0
+
+Summary: Python package for writing, manipulating, and running quantum circuits on quantum computers.
+
+Development: https://github.com/quantumlib/Cirq/tree/master/cirq-google
+
+Documentation: https://quantumai.google/cirq/install
+
+Cirq is a Python library for writing, manipulating, and optimizing quantum circuits and running them against quantum computers and simulators. It provides useful abstractions for dealing with today’s noisy intermediate-scale quantum (NISQ) computers, where the details of quantum hardware are vital to achieving state-of-the-art results.
+
+About cirq-ionq
+---------------
+
+Home: https://quantumai.google/cirq
+
+Package license: Apache-2.0
+
+Summary: Python package for writing, manipulating, and running quantum circuits on quantum computers.
+
+Development: https://github.com/quantumlib/Cirq/tree/master/cirq-ionq
+
+Documentation: https://quantumai.google/cirq/install
+
+Cirq is a Python library for writing, manipulating, and optimizing quantum circuits and running them against quantum computers and simulators. It provides useful abstractions for dealing with today’s noisy intermediate-scale quantum (NISQ) computers, where the details of quantum hardware are vital to achieving state-of-the-art results.
+
+About cirq-pasqal
+-----------------
+
+Home: https://quantumai.google/cirq
+
+Package license: Apache-2.0
+
+Summary: Python package for writing, manipulating, and running quantum circuits on quantum computers.
+
+Development: https://github.com/quantumlib/Cirq/tree/master/cirq-pasqal
+
+Documentation: https://quantumai.google/cirq/install
+
+Cirq is a Python library for writing, manipulating, and optimizing quantum circuits and running them against quantum computers and simulators. It provides useful abstractions for dealing with today’s noisy intermediate-scale quantum (NISQ) computers, where the details of quantum hardware are vital to achieving state-of-the-art results.
+
+About cirq-rigetti
+------------------
+
+Home: https://quantumai.google/cirq
+
+Package license: Apache-2.0
+
+Summary: Python package for writing, manipulating, and running quantum circuits on quantum computers.
+
+Development: https://github.com/quantumlib/Cirq/tree/master/cirq-rigetti
+
+Documentation: https://quantumai.google/cirq/install
+
+Cirq is a Python library for writing, manipulating, and optimizing quantum circuits and running them against quantum computers and simulators. It provides useful abstractions for dealing with today’s noisy intermediate-scale quantum (NISQ) computers, where the details of quantum hardware are vital to achieving state-of-the-art results.
+
+About cirq-web
+--------------
+
+Home: https://quantumai.google/cirq
+
+Package license: Apache-2.0
+
+Summary: Python package for writing, manipulating, and running quantum circuits on quantum computers.
+
+Development: https://github.com/quantumlib/Cirq/tree/master/cirq-web
+
+Documentation: https://quantumai.google/cirq/install
+
+Cirq is a Python library for writing, manipulating, and optimizing quantum circuits and running them against quantum computers and simulators. It provides useful abstractions for dealing with today’s noisy intermediate-scale quantum (NISQ) computers, where the details of quantum hardware are vital to achieving state-of-the-art results.
 
 Current build status
 ====================
@@ -228,12 +220,12 @@ it is possible to build and upload installable packages to the
 [conda-forge](https://anaconda.org/conda-forge) [anaconda.org](https://anaconda.org/)
 channel for Linux, Windows and OSX respectively.
 
-To manage the continuous integration and simplify feedstock maintenance
+To manage the continuous integration and simplify feedstock maintenance,
 [conda-smithy](https://github.com/conda-forge/conda-smithy) has been developed.
 Using the ``conda-forge.yml`` within this repository, it is possible to re-render all of
 this feedstock's supporting files (e.g. the CI configuration files) with ``conda smithy rerender``.
 
-For more information please check the [conda-forge documentation](https://conda-forge.org/docs/).
+For more information, please check the [conda-forge documentation](https://conda-forge.org/docs/).
 
 Terminology
 ===========
@@ -260,7 +252,7 @@ merged, the recipe will be re-built and uploaded automatically to the
 everybody to install and use from the `conda-forge` channel.
 Note that all branches in the conda-forge/cirq-feedstock are
 immediately built and any created packages are uploaded, so PRs should be based
-on branches in forks and branches in the main repository should only be used to
+on branches in forks, and branches in the main repository should only be used to
 build distinct package versions.
 
 In order to produce a uniquely identifiable distribution:
