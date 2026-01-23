@@ -228,6 +228,7 @@ outputs:
         - google-api-core-grpc >=1.14.0
         - protobuf >=5.29.5
         - proto-plus >=1.26.0
+        - typedunits
     tests:
       - python:
           python_version:
