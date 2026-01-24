@@ -95,11 +95,11 @@ outputs:
       license_file: cirq-aqt/LICENSE
 
   - package:
-      name: cirq-web
+      name: cirq-google
     build:
       noarch: python
       script: |
-        cd cirq-web
+        cd cirq-google
         ${PYTHON} -m pip install . -vv --no-deps
     requirements:
       host:
@@ -109,49 +109,23 @@ outputs:
       run:
         - python >=${{ python_min }}
         - cirq-core ==${{ version }}
+        - google-api-core-grpc >=1.14.0
+        - protobuf >=5.29.5
+        - proto-plus >=1.26.0
+        - typedunits
     tests:
       - python:
           python_version:
             - ${{ python_min }}.*
           imports:
-            - cirq_web
+            - cirq_google
     about:
       homepage: ${{ home }}
       summary: ${{ summary }}
-      repository: https://github.com/quantumlib/Cirq/tree/master/cirq-web
+      repository: https://github.com/quantumlib/Cirq/tree/master/cirq-google
       documentation: ${{ doc_url }}
       license: Apache-2.0
-      license_file: cirq-web/LICENSE
-
-  - package:
-      name: cirq-pasqal
-    build:
-      noarch: python
-      script: |
-        cd cirq-pasqal
-        ${PYTHON} -m pip install . -vv --no-deps
-    requirements:
-      host:
-        - python ${{ python_min }}.*
-        - pip
-        - setuptools >=70
-      run:
-        - python >=${{ python_min }}
-        - cirq-core ==${{ version }}
-        - requests >=2.32.4,<3
-    tests:
-      - python:
-          python_version:
-            - ${{ python_min }}.*
-          imports:
-            - cirq_pasqal
-    about:
-      homepage: ${{ home }}
-      summary: ${{ summary }}
-      repository: https://github.com/quantumlib/Cirq/tree/master/cirq-pasqal
-      documentation: ${{ doc_url }}
-      license: Apache-2.0
-      license_file: cirq-pasqal/LICENSE
+      license_file: cirq-google/LICENSE
 
   - package:
       name: cirq-ionq
@@ -184,11 +158,11 @@ outputs:
       license_file: cirq-ionq/LICENSE
 
   - package:
-      name: cirq-google
+      name: cirq-pasqal
     build:
       noarch: python
       script: |
-        cd cirq-google
+        cd cirq-pasqal
         ${PYTHON} -m pip install . -vv --no-deps
     requirements:
       host:
@@ -198,23 +172,49 @@ outputs:
       run:
         - python >=${{ python_min }}
         - cirq-core ==${{ version }}
-        - google-api-core-grpc >=1.14.0
-        - protobuf >=5.29.5
-        - proto-plus >=1.26.0
-        - typedunits
+        - requests >=2.32.4,<3
     tests:
       - python:
           python_version:
             - ${{ python_min }}.*
           imports:
-            - cirq_google
+            - cirq_pasqal
     about:
       homepage: ${{ home }}
       summary: ${{ summary }}
-      repository: https://github.com/quantumlib/Cirq/tree/master/cirq-google
+      repository: https://github.com/quantumlib/Cirq/tree/master/cirq-pasqal
       documentation: ${{ doc_url }}
       license: Apache-2.0
-      license_file: cirq-google/LICENSE
+      license_file: cirq-pasqal/LICENSE
+
+  - package:
+      name: cirq-web
+    build:
+      noarch: python
+      script: |
+        cd cirq-web
+        ${PYTHON} -m pip install . -vv --no-deps
+    requirements:
+      host:
+        - python ${{ python_min }}.*
+        - pip
+        - setuptools >=70
+      run:
+        - python >=${{ python_min }}
+        - cirq-core ==${{ version }}
+    tests:
+      - python:
+          python_version:
+            - ${{ python_min }}.*
+          imports:
+            - cirq_web
+    about:
+      homepage: ${{ home }}
+      summary: ${{ summary }}
+      repository: https://github.com/quantumlib/Cirq/tree/master/cirq-web
+      documentation: ${{ doc_url }}
+      license: Apache-2.0
+      license_file: cirq-web/LICENSE
 
   - package:
       name: cirq
