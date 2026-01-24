@@ -297,4 +297,5 @@ extra:
   recipe-maintainers:
     - basnijholt
     - BastianZim
+    - h-vetinari
   feedstock-name: cirq
