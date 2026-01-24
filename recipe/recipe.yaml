@@ -17,7 +17,8 @@ source:
   url: https://github.com/quantumlib/Cirq/archive/refs/tags/v${{ version }}.tar.gz
   sha256: 65da567eea507b5a2b2609fea8cb5e6a2b4e92a6622fad9c2a5c406761b09475
   patches:
-    - patches/0001-allow-protobuf-v6.patch
+    # backport https://github.com/quantumlib/Cirq/pull/7628
+    - patches/0001-Allow-cirq-google-installation-with-protobuf-6-in-ad.patch
 
 build:
   number: 0

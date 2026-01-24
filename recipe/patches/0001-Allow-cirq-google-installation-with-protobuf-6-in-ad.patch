@@ -1,0 +1,44 @@
+From 38b70bfd8ebc045a157a9346dcadad7cb90eaf6b Mon Sep 17 00:00:00 2001
+From: "dependabot[bot]" <49699333+dependabot[bot]@users.noreply.github.com>
+Date: Mon, 8 Sep 2025 10:53:50 -0700
+Subject: [PATCH] Allow cirq-google installation with protobuf-6 in addtion to
+ protobuf-5 (#7628)
+
+Increase top version limit for protobuf from "<6.0dev" to "<7.0dev".
+
+Note: including dev_tools/requirements/deps/protos.txt requirements
+would
+resolve to protobuf-5 because of grpcio-tools for proto code generation.
+Unit tests pass with protobuf-6 installed manually.
+
+---------
+
+Signed-off-by: dependabot[bot] <support@github.com>
+Co-authored-by: dependabot[bot] <49699333+dependabot[bot]@users.noreply.github.com>
+Co-authored-by: Pavol Juhas <juhas@google.com>
+---
+ cirq-google/requirements.txt         | 2 +-
+ dev_tools/requirements/deps/mypy.txt | 2 +-
+ 2 files changed, 2 insertions(+), 2 deletions(-)
+
+diff --git a/cirq-google/requirements.txt b/cirq-google/requirements.txt
+index 84c6d5f9..fdd23438 100644
+--- a/cirq-google/requirements.txt
++++ b/cirq-google/requirements.txt
+@@ -1,4 +1,4 @@
+ google-api-core[grpc] ~= 2.22
+ proto-plus ~= 1.25
+-protobuf >= 5.26.1, <6.0dev
++protobuf >= 5.26.1, <7.0dev
+ typedunits
+diff --git a/dev_tools/requirements/deps/mypy.txt b/dev_tools/requirements/deps/mypy.txt
+index 47900033..2f05dc08 100644
+--- a/dev_tools/requirements/deps/mypy.txt
++++ b/dev_tools/requirements/deps/mypy.txt
+@@ -2,5 +2,5 @@
+ mypy==1.16.1
+ 
+ # packages with stub types for various libraries
+-types-protobuf>=5.26.1, <6.0dev
++types-protobuf>=5.26.1, <7.0dev
+ types-requests~=2.32
