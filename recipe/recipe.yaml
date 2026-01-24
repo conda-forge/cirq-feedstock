@@ -138,6 +138,7 @@ outputs:
         - python >=${{ python_min }}
         - cirq-core ==${{ version }}
         - pyquil >=4.11.0, <5.0.0
+        - qcs-sdk-python <=0.21.12
     tests:
       - python:
           python_version:
