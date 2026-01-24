@@ -7,7 +7,7 @@ context:
     Python package for writing, manipulating, and running quantum circuits
     on quantum computers.
   doc_url: https://quantumai.google/cirq/install
-  python_min: '3.10'
+  python_min: '3.11'
 
 recipe:
   name: cirq-meta
