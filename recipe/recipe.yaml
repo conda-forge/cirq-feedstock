@@ -16,6 +16,8 @@ recipe:
 source:
   url: https://github.com/quantumlib/Cirq/archive/refs/tags/v${{ version }}.tar.gz
   sha256: ff1622dea7de12e58fc47458e30d576c9a5a4faba5fd85bc6849150d1da3fc7f
+  patches:
+    - patches/0001-allow-protobuf-v6.patch
 
 build:
   number: 0
