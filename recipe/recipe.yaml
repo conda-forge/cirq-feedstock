@@ -1,7 +1,7 @@
 schema_version: 1
 
 context:
-  version: "1.6.1"
+  version: "1.7.0"
   home: https://quantumai.google/cirq
   summary: >-
     Python package for writing, manipulating, and running quantum circuits
@@ -15,7 +15,7 @@ recipe:
 
 source:
   url: https://github.com/quantumlib/Cirq/archive/refs/tags/v${{ version }}.tar.gz
-  sha256: 65da567eea507b5a2b2609fea8cb5e6a2b4e92a6622fad9c2a5c406761b09475
+  sha256: 671f6d5a82d7d16375839eaacc171ba13b085c811639e7e37f2f41f676e1fe03
   patches:
     # backport https://github.com/quantumlib/Cirq/pull/7628
     - patches/0001-Allow-cirq-google-installation-with-protobuf-6-in-ad.patch
